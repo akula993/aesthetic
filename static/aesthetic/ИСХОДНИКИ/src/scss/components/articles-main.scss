@@ -1,0 +1,94 @@
+// articles-main
+.articles-main {
+  @media (max-width: 767px){
+    overflow: hidden;
+  }
+  &__title {
+    text-align: center;
+    @media (max-width: 767px){
+      text-align: start;
+      margin-bottom: 30px;
+    }
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 0 30px;
+    margin-bottom: 45px;
+  }
+  &__slider {
+    @media (max-width: 767px){
+      margin-bottom: 30px;
+      padding-right: 60px;
+      overflow: visible;
+    }
+  }
+  &__item {
+    grid-column: 4 span;
+    position: relative;
+    transition: opacity .2s linear;
+    @media (max-width: 767px){
+      @media (max-width: 767px){
+        margin-bottom: 20px;
+      }
+      grid-column: 6 span;
+    }
+    @media (max-width: 575px){
+      grid-column: 12 span;
+    }
+    &-img {
+      height: 240px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      margin-bottom: 10px;
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+      transition: opacity .2s linear;
+      @media (max-width: 767px){
+        height: 300px;
+      }   
+      @media (max-width: 575px){
+        height: 250px;
+      }
+      @media (max-width: 400px){
+        height: 180px;
+      }
+      &::after {
+        content: '';
+        background: linear-gradient(180deg, rgba(34, 24, 20, 0.3) 0%, rgba(49, 40, 36, 0) 100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &-descr {
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 24px;
+      letter-spacing: 0.05em; 
+      color: rgba(255, 255, 255, 0.6);  
+      padding-right: 20px;
+      padding-left: 20px;  
+      transition: color .2s linear;  
+    }
+    a {
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+    }
+    &:hover {
+      .articles-main__item-img {
+        opacity: .8;
+      }
+      .articles-main__item-descr {
+        color: #fff;       
+      }
+    }
+  }
+}

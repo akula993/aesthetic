@@ -1,0 +1,11 @@
+{% load views_extras  %}
+{% if POPULAR %}
+    <ul class="list-group">
+        <li class="list-group-item active"><strong>Популярные публикации за неделю</strong></li>
+        {% for article in POPULAR_ARTICLES %}
+            <li class="list-group-item">
+                <a href="{% url 'post:article' article.article_id %}">{{ article.article__title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endif %}

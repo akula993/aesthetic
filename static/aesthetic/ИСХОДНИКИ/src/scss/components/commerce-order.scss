@@ -1,0 +1,74 @@
+// commerce-order
+.commerce-order {
+  padding-top: 0; 
+  &__container {
+    background-color: #262220;
+    padding: 40px 60px 48px;
+    border-radius: 30px;   
+    @media (max-width: 575px){
+      padding: 30px 20px;
+    } 
+  }
+  &__input {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 27px;    
+    height: 56px;
+    padding: 0 25px;
+    width: 100%;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 1); 
+    @media (max-width: 991px){
+      margin-bottom: 10px;
+    }  
+    &::placeholder {
+      color: rgba(255, 255, 255, .6); 
+    } 
+  }
+  &__title {
+    text-align: center;
+  }
+  &__bottom {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    @media (max-width: 575px){
+      margin-top: 0;
+      flex-direction: column-reverse;
+      align-items: flex-start;
+    }
+  }
+  &__btn {
+    margin-right: 20px;
+  }
+  &__agreement {
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);    
+    display: flex;   
+    height: fit-content;
+    &-link {
+      font-weight: 700;      
+    }
+    @media (max-width: 575px){
+      padding-left: 20px;
+      margin-bottom: 30px;
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
+}
+#commerce-order__agreement {
+  position: relative;
+  top: 2px;
+}
+.commerce-order__agreement-link {
+  display: inline-block;
+}
+.commerce-order__agreement-text {
+  margin-left: 8px;
+}

@@ -1,0 +1,135 @@
+// calendar
+.calendar {
+  &__title {
+    font-family: $font-family-second; 
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 0.02em;
+    color: rgba(255, 255, 255, 0.6);    
+    margin-bottom: 30px;
+    @media (max-width: 991px){
+      font-size: 20px;
+      line-height: 25px;
+      margin-bottom: 20px;
+    }
+  }
+}
+.calendar__nav {
+  padding-top: 30px;
+  padding-left: 40px;
+  padding-right: 20px;
+  margin-bottom: 45px;
+  &-list {
+    li {
+      margin-bottom: 15px;
+      &.active {
+        a {
+          color: rgba(255, 255, 255, 1);     
+        }
+      }
+      a {
+        font-family: $font-family-second; 
+        font-size: 18px;
+        line-height: 24px; 
+        letter-spacing: 0.02em; 
+        color: rgba(255, 255, 255, 0.6);   
+        transition: color .2s linear;   
+        &:hover {
+          color: rgba(255, 255, 255, 1);   
+          opacity: 1;
+        }       
+      }
+    }
+  }
+}
+.calendar__item {
+  margin-bottom: 30px;
+  background-color: #262220;
+  border-radius: 20px;
+  padding: 40px;
+  @media (max-width: 991px){
+    padding: 20px;
+  }
+  &-title {
+    font-family: $font-family-second;
+    font-size: 24px;
+    line-height: 30px;  
+    letter-spacing: 0.02em; 
+    @media (max-width: 991px){
+      font-size: 20px;
+      line-height: 25px;
+    }
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      @media (max-width: 767px){
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  }
+  &-date {
+    text-align: end;
+    @media (max-width: 767px){
+      text-align: start;
+      margin-top: 20px;
+    }
+  }
+  &-day {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #57B690;   
+    margin-bottom: 3px; 
+  }
+  &-time {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: rgba(255, 255, 255, 0.6);    
+  }
+  &-text {
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);   
+    margin-bottom: 32px; 
+    @media (max-width: 991px){
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+}
+.calendar-programm {
+  margin-bottom: 32px;
+  &__title {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: 0.05em; 
+    margin-bottom: 16px;
+  }
+  &__list {
+    padding-left: 20px;
+    color: rgba(255, 255, 255, 0.6);
+    list-style: disc!important;
+    li {  
+      font-size: 13px;
+      line-height: 18px;
+      letter-spacing: 0.03em;
+      color: rgba(255, 255, 255, 0.6);
+      margin-bottom: 16px;
+    }
+  }
+}
+.calendar-finished {
+  opacity: 50%;
+  margin-top: 60px;
+}
+#modal-repair-agree {
+  width: 13px;
+  height: 13px;
+  position: relative;
+  top: 2px;
+}

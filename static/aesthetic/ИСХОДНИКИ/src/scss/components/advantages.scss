@@ -1,0 +1,81 @@
+// advantages
+.advantages {
+  &__item {
+    position: relative;
+    padding-left: 52px;
+    &-title {
+      font-family: $font-family-second; 
+      font-size: 13px;
+      line-height: 16px;  
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      max-width: 169px;
+    }
+    &-descr {   
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 18px;
+      letter-spacing: 0.03em;
+      color: rgba(255, 255, 255, 0.4);      
+    }
+    &.first {
+      &::before {
+        background-image: url('@img/advantages/adv-icon1.svg');
+      }
+    }
+    &.second {
+      &::before {
+        background-image: url('@img/advantages/adv-icon2.svg');
+      }
+    }
+    &.third {
+      &::before {
+        background-image: url('@img/advantages/adv-icon3.svg');
+      }
+    }
+    &.forth {
+      &::before {
+        background-image: url('@img/advantages/adv-icon4.svg');
+      }
+    }
+    &::before {
+      content: '';
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 32px;
+      height: 32px;
+      background-position: center top;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+   
+  }
+  .col-xl-3 {
+    &:not(:last-child) {
+      border-right: 1px solid rgba(255, 255, 255, 0.07);
+      @media (max-width: 1199px){
+        border-right: none;
+      }
+    }
+  }
+  .advantages__item-wrapper {
+    @media (max-width: 1199px){
+      margin-bottom: 30px;
+    }
+    &:not(:last-child) {
+
+    
+      @media (max-width: 991px){
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+        margin-bottom: 20px;
+      }
+    }
+   
+  }
+  @media (max-width: 575px){
+    padding-bottom: 20px;
+  }
+}

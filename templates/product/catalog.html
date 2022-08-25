@@ -1,0 +1,146 @@
+{% extends 'base.html' %}
+{% block title %}
+    <title>{{ title }}</title>
+{% endblock %}
+{% block content %}
+    <main class="main">
+        <!-- intro-catalog -->
+        <section class="intro-catalog" id="intro-catalog" style="background-image: url('img/intro/intro-main1.png');">
+            <div class="container">
+                <div class="intro-catalog__offer">
+                    <h1 class="intro-catalog__title">
+                        {{ name }}
+                    </h1>
+                    <p class="intro-catalog__descr">
+                        Краткое описание продукции компании. Воплощение стиля и технологий. Тысячи приложений, голосовой
+                        поиск и мгновенная загрузка контента
+                    </p>
+                </div>
+            </div>
+            <div class="bg-linear"></div>
+            <div class="bg-linear1"></div>
+        </section>
+        <!-- catalog-content -->
+        <section class="catalog-content">
+            <div class="container catalog__list">
+                {% for product in products|slice:":2" %}
+                    <div class="catalog-card">
+                        <div class="catalog-card__left">
+                            <div class="catalog-card__img">
+                                <img src="{{ product.image.url }}" alt="image">
+                            </div>
+                        </div>
+                        <div class="catalog-card__right">
+                            <div class="catalog-card__title">
+                                {{ product.name }}
+                            </div>
+                            <p class="catalog-card__descr">
+                                {{ product.text_title }}
+                            </p>
+                            <div class="catalog-card__params params">
+                                <div class="params__title">
+                                    Характеристики
+                                </div>
+                                <ul class="params__list">
+                                    <div class="params__item">
+                                        <div class="params__item-title">
+                                            Мощность
+                                        </div>
+                                        <div class="params__item-text">
+                                            {{ product.power }} Ватт
+                                        </div>
+                                    </div><!-- /params__item -->
+                                    <div class="params__item">
+                                        <div class="params__item-title">
+                                            Число режимов
+                                        </div>
+                                        <div class="params__item-text">
+                                            {{ product.number_of_mode }}
+                                        </div>
+                                    </div><!-- /params__item -->
+                                    <div class="params__item">
+                                        <div class="params__item-title">
+                                            Число просмотров
+                                        </div>
+                                        <div class="params__item-text">
+                                            {{ product.views }}
+                                        </div>
+                                    </div><!-- /params__item -->
+                                </ul>
+                            </div><!-- /params -->
+                            <a href="{{ product.get_absolute_url }}" class="catalog-content__more btn-more">
+                                подробнее
+                            </a>
+                        </div>
+                    </div><!-- /catalog-card -->
+
+                {% endfor %}
+                <div class="catalog-proposition" style="background-image: url('img/proposition/proposition-img1.png');">
+                    <div class="catalog-proposition__content">
+                        <div class="catalog-proposition__content-text">Запросить коммерческое предложение</div>
+                        <div>
+                            <img src="img/icons/arrows-lg.svg" alt="arrows">
+                        </div>
+
+                    </div>
+                    <button class="btn-reset btn-full" data-graph-path="modal-commerce"></button>
+                </div>
+
+                {% for product in products|slice:"2:" %}
+                    <div class="catalog-card">
+                        <div class="catalog-card__left">
+                            <div class="catalog-card__img">
+                                <img src="{{ product.image.url }}" alt="image">
+                            </div>
+                        </div>
+                        <div class="catalog-card__right">
+                            <div class="catalog-card__title">
+                                {{ product.name }}
+                            </div>
+                            <p class="catalog-card__descr">
+                                {{ product.text_title }}
+                            </p>
+                            <div class="catalog-card__params params">
+                                <div class="params__title">
+                                    Характеристики
+                                </div>
+                                <ul class="params__list">
+                                    <div class="params__item">
+                                        <div class="params__item-title">
+                                            Мощность
+                                        </div>
+                                        <div class="params__item-text">
+                                            {{ product.power }} Ватт
+                                        </div>
+                                    </div><!-- /params__item -->
+                                    <div class="params__item">
+                                        <div class="params__item-title">
+                                            Число режимов
+                                        </div>
+                                        <div class="params__item-text">
+                                            {{ product.number_of_mode }}
+                                        </div>
+                                    </div><!-- /params__item -->
+                                    <div class="params__item">
+                                        <div class="params__item-title">
+                                            Число просмотров
+                                        </div>
+                                        <div class="params__item-text">
+                                            {{ product.views }}
+                                        </div>
+                                    </div><!-- /params__item -->
+                                </ul>
+                            </div><!-- /params -->
+                            <a href="{{ product.get_absolute_url }}" class="catalog-content__more btn-more">
+                                подробнее
+                            </a>
+                        </div>
+                    </div><!-- /catalog-card -->
+                {% endfor %}
+
+            </div>
+
+        </section>
+
+    </main>
+{% endblock %}

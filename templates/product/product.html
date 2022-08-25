@@ -1,0 +1,1260 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <main class="main">
+        <!-- intro-product -->
+        <section class="intro-product" id="intro-product" style="background-image: url('img/intro/intro-ptrod.jpg');">
+            <div class="container intro-product__container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <a href="catalog.html" class="intro-product__catalog-btn btn-back">Вся продукция</a>
+                        <h1 class="intro-product__title">UCOS HIFU</h1>
+                        <div class="intro-product__subtitle">аппарат для ультразвукового SMAS-лифтинга</div>
+                        <button class="btn-reset intro-product__btn" data-graph-path="modal-commerce">
+                            <div class="intro-product__btn-text">
+                                Запросить коммерческое предложение
+                            </div>
+                            <img src="img/icons/arrows.svg" alt="arrows">
+                        </button>
+
+                    </div>
+                    <div class="col-lg-6 intro-product__right">
+                        <div class="swiper intro-product__slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide intro-product__slide">
+                                    <img src="img/catalog/catalog-1.png" alt="photo">
+                                </div>
+                                <div class="swiper-slide intro-product__slide">
+                                    <img src="img/catalog/catalog-2.png" alt="photo">
+                                </div>
+                                <div class="swiper-slide intro-product__slide">
+                                    <img src="img/catalog/catalog-3.png" alt="photo">
+                                </div>
+                                <div class="swiper-slide intro-product__slide">
+                                    <img src="img/catalog/catalog-2.png" alt="photo">
+                                </div>
+                                <div class="swiper-slide intro-product__slide">
+                                    <img src="img/catalog/catalog-1.png" alt="photo">
+                                </div>
+                            </div>
+
+                        </div><!-- /slider -->
+                        <div class="navi-pagi">
+                            <div class="container navi-pagi__container">
+                                <button class="intro-main__arrow intro-main__arrow-prev">
+                                    <img src="img/icons/slider-arrow-left.svg" alt="icon">
+                                </button>
+                                <div class="pagination">
+
+                                </div>
+                                <button class="intro-main__arrow intro-main__arrow-next">
+                                    <img src="img/icons/slider-arrow-right.svg" alt="icon">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-linear"></div>
+            <div class="bg-linear1"></div>
+        </section>
+        <!-- about-product -->
+        <section class="about-product" id="about-product">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="about-product__text">
+                            <p>
+                                Высококачественный прототип будущего проекта предопределяет высокую востребованность
+                                стандартных подходов.
+                                Сложно сказать, почему непосредственные участники технического прогресса призывают нас к
+                                новым свершениям,
+                                которые, в свою очередь, должны быть разоблачены. Не следует, однако, забывать, что
+                                понимание сути
+                                ресурсосберегающих технологий не оставляет шанса для своевременного выполнения.
+                            </p>
+                            <p>
+                                Сложно сказать, почему непосредственные участники технического прогресса призывают нас к
+                                новым свершениям,
+                                которые, в свою очередь, должны быть разоблачены. Не следует, однако, забывать, что
+                                понимание сути
+                                ресурсосберегающих технологий не оставляет шанса для своевременного выполнения
+                                сверхзадачи.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-product__video">
+                            <video class="video-js" controls preload="auto" poster="img/product/poster-about.png"
+                                   data-setup='{}'>
+                                <source src="img/1.mp4" type="video/mp4">
+                                </source>
+                                <source src="img/1.mp4" type="video/webm">
+                                </source>
+                                <source src="img/1.mp4" type="video/ogg">
+                                </source>
+                                <p class="vjs-no-js">
+                                    To view this video please enable JavaScript, and consider upgrading to a
+                                    web browser that
+                                    <a href="https://videojs.com/html5-video-support/" target="_blank">
+                                        supports HTML5 video
+                                    </a>
+                                </p>
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- commerce-order -->
+        <section class="commerce-order" id="commerce-order">
+            <div class="container commerce-order__container">
+
+                <div class="row">
+                    <div class="col">
+                        <h2 class="commerce-order__title section-title">
+                            Получить коммерческое предложение
+                        </h2>
+                    </div>
+                </div>
+                <form action="#" class="commerce-order__form">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <input class="commerce-order__input" type="text" placeholder="Имя">
+                        </div>
+                        <div class="col-lg-3">
+                            <input class="commerce-order__input" type="mail" placeholder="Email">
+                        </div>
+                        <div class="col-lg-3">
+                            <input class="commerce-order__input" type="tel" placeholder="Телефон">
+                        </div>
+                        <div class="col-lg-3">
+                            <input class="commerce-order__input" type="text" placeholder="Ваш город">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="commerce-order__bottom">
+                                <button class="commerce-order__btn btn" type="submit">подробнее</button>
+                                <label class="commerce-order__agreement" for="commerce-order__agreement">
+                                    <input id="commerce-order__agreement" type="checkbox">
+                                    <div class="commerce-order__agreement-text">
+                                        Соглашаюсь на обработку <a class="commerce-order__agreement-link" href="#">персональных
+                                        данных</a>
+                                    </div>
+                                </label>
+                            </div>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!-- product-tabs -->
+        <section class="product-tabs" id="product-tabs">
+            <div class="container">
+                <div class="tabs" data-tabs="popup">
+                    <ul class="tabs__nav">
+                        <li class="tabs__nav-item">
+                            <button class="tabs__nav-btn" type="button">Характеристики</button>
+                        </li>
+                        <li class="tabs__nav-item">
+                            <button class="tabs__nav-btn" type="button">Показания и принцип работы</button>
+                        </li>
+                        <li class="tabs__nav-item">
+                            <button class="tabs__nav-btn" type="button">Картриджи</button>
+                        </li>
+                        <li class="tabs__nav-item">
+                            <button class="tabs__nav-btn" type="button">Результаты процедур</button>
+                        </li>
+                        <li class="tabs__nav-item">
+                            <button class="tabs__nav-btn" type="button">Особенности аппарата</button>
+                        </li>
+                    </ul>
+                    <div class="tabs__content">
+                        <div class="tabs__panel">
+                            <ul class="product-tabs__params param-list">
+                                <li class="param-item">
+                                    <div class="param-item__name">
+                                        Мощность
+                                    </div>
+                                    <div class="param-item__text">
+                                        500 Ватт
+                                    </div>
+                                </li>
+                                <li class="param-item">
+                                    <div class="param-item__name">
+                                        Число режимов
+                                    </div>
+                                    <div class="param-item__text">
+                                        12
+                                    </div>
+                                </li>
+                                <li class="param-item">
+                                    <div class="param-item__name">
+                                        Число режимов
+                                    </div>
+                                    <div class="param-item__text">
+                                        12
+                                    </div>
+                                </li>
+                                <li class="param-item">
+                                    <div class="param-item__name">
+                                        Мощность
+                                    </div>
+                                    <div class="param-item__text">
+                                        500 Ватт
+                                    </div>
+                                </li>
+                                <li class="param-item">
+                                    <div class="param-item__name">
+                                        Число режимов
+                                    </div>
+                                    <div class="param-item__text">
+                                        12
+                                    </div>
+                                </li>
+                                <li class="param-item">
+                                    <div class="param-item__name">
+                                        Число режимов
+                                    </div>
+                                    <div class="param-item__text">
+                                        12
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tabs__panel"></div>
+                        <div class="tabs__panel"></div>
+                        <div class="tabs__panel"></div>
+                        <div class="tabs__panel"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- reviews -->
+        <section class="reviews" id="reviews">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="reviews__title-wrapper">
+                            <h3 class="reviews__title">
+                                Отзывы
+                            </h3>
+                            <div class="reviews__navigation navigation d-none d-lg-block">
+                                <button class="navigation__arrow navigation__arrow-prev"><img
+                                        src="img/product/arrow-prev-slider.svg"
+                                        alt="icon"></button>
+                                <button class="navigation__arrow navigation__arrow-next"><img
+                                        src="img/product/arrow-next-slider.svg"
+                                        alt="icon"></button>
+                            </div>
+                            <a href="#" class="btn-more d-block d-lg-none">Все отзывы</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper reviews__slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide reviews__slide">
+                            <div class="reviews__slide-top">
+                                <video class="video-js" controls preload="auto" poster="img/product/poster-about.png"
+                                       data-setup='{}'>
+                                    <source src="img/1.mp4" type="video/mp4">
+                                    </source>
+                                    <source src="img/1.mp4" type="video/webm">
+                                    </source>
+                                    <source src="img/1.mp4" type="video/ogg">
+                                    </source>
+                                    <p class="vjs-no-js">
+                                        To view this video please enable JavaScript, and consider upgrading to a
+                                        web browser that
+                                        <a href="https://videojs.com/html5-video-support/" target="_blank">
+                                            supports HTML5 video
+                                        </a>
+                                    </p>
+                                </video>
+                            </div>
+                            <div class="reviews__slide-bottom">
+                                <div class="reviews__slide-name">Фамилия Имя Отчество</div>
+                                <div class="reviews__slide-work">Должность</div>
+                                <div class="reviews__slide-company">Компания</div>
+                            </div>
+                        </div><!-- /slide -->
+                        <div class="swiper-slide reviews__slide">
+                            <div class="reviews__slide-top">
+                                <video class="video-js" controls preload="auto" poster="img/product/poster-about.png"
+                                       data-setup='{}'>
+                                    <source src="img/1.mp4" type="video/mp4">
+                                    </source>
+                                    <source src="img/1.mp4" type="video/webm">
+                                    </source>
+                                    <source src="img/1.mp4" type="video/ogg">
+                                    </source>
+                                    <p class="vjs-no-js">
+                                        To view this video please enable JavaScript, and consider upgrading to a
+                                        web browser that
+                                        <a href="https://videojs.com/html5-video-support/" target="_blank">
+                                            supports HTML5 video
+                                        </a>
+                                    </p>
+                                </video>
+                            </div>
+                            <div class="reviews__slide-bottom">
+                                <div class="reviews__slide-name">Фамилия Имя Отчество</div>
+                                <div class="reviews__slide-work">Должность</div>
+                                <div class="reviews__slide-company">Компания</div>
+                            </div>
+                        </div><!-- /slide -->
+                        <div class="swiper-slide reviews__slide">
+                            <div class="reviews__slide-top">
+                                <video class="video-js" controls preload="auto" poster="img/product/poster-about.png"
+                                       data-setup='{}'>
+                                    <source src="img/1.mp4" type="video/mp4">
+                                    </source>
+                                    <source src="img/1.mp4" type="video/webm">
+                                    </source>
+                                    <source src="img/1.mp4" type="video/ogg">
+                                    </source>
+                                    <p class="vjs-no-js">
+                                        To view this video please enable JavaScript, and consider upgrading to a
+                                        web browser that
+                                        <a href="https://videojs.com/html5-video-support/" target="_blank">
+                                            supports HTML5 video
+                                        </a>
+                                    </p>
+                                </video>
+                            </div>
+                            <div class="reviews__slide-bottom">
+                                <div class="reviews__slide-name">Фамилия Имя Отчество</div>
+                                <div class="reviews__slide-work">Должность</div>
+                                <div class="reviews__slide-company">Компания</div>
+                            </div>
+                        </div><!-- /slide -->
+                        <div class="swiper-slide reviews__slide">
+                            <div class="reviews__slide-top">
+                                <video class="video-js" controls preload="auto" poster="img/product/poster-about.png"
+                                       data-setup='{}'>
+                                    <source src="img/1.mp4" type="video/mp4">
+                                    </source>
+                                    <source src="img/1.mp4" type="video/webm">
+                                    </source>
+                                    <source src="img/1.mp4" type="video/ogg">
+                                    </source>
+                                    <p class="vjs-no-js">
+                                        To view this video please enable JavaScript, and consider upgrading to a
+                                        web browser that
+                                        <a href="https://videojs.com/html5-video-support/" target="_blank">
+                                            supports HTML5 video
+                                        </a>
+                                    </p>
+                                </video>
+                            </div>
+                            <div class="reviews__slide-bottom">
+                                <div class="reviews__slide-name">Фамилия Имя Отчество</div>
+                                <div class="reviews__slide-work">Должность</div>
+                                <div class="reviews__slide-company">Компания</div>
+                            </div>
+                        </div><!-- /slide -->
+                        <div class="swiper-slide reviews__slide">
+                            <div class="reviews__slide-top">
+                                <video class="video-js" controls preload="auto" poster="img/product/poster-about.png"
+                                       data-setup='{}'>
+                                    <source src="img/1.mp4" type="video/mp4">
+                                    </source>
+                                    <source src="img/1.mp4" type="video/webm">
+                                    </source>
+                                    <source src="img/1.mp4" type="video/ogg">
+                                    </source>
+                                    <p class="vjs-no-js">
+                                        To view this video please enable JavaScript, and consider upgrading to a
+                                        web browser that
+                                        <a href="https://videojs.com/html5-video-support/" target="_blank">
+                                            supports HTML5 video
+                                        </a>
+                                    </p>
+                                </video>
+                            </div>
+                            <div class="reviews__slide-bottom">
+                                <div class="reviews__slide-name">Фамилия Имя Отчество</div>
+                                <div class="reviews__slide-work">Должность</div>
+                                <div class="reviews__slide-company">Компания</div>
+                            </div>
+                        </div><!-- /slide -->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col nav-wrapper">
+                        <button class="navigation__arrow navigation__arrow-prev d-block d-lg-none"><img
+                                src="img/product/arrow-prev-slider.svg"
+                                alt="icon"></button>
+                        <div class="pagination">
+
+                        </div>
+                        <button class="navigation__arrow navigation__arrow-next d-block d-lg-none"><img
+                                src="img/product/arrow-next-slider.svg"
+                                alt="icon"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- repair-items -->
+        <section class="repair-items" id="repair-items">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="repair-items__title-wrapper">
+                            <h3 class="repair-items__title">
+                                Расходные материалы
+                            </h3>
+                            <div class="repair-items__navigation navigation d-none d-lg-block">
+                                <button class="navigation__arrow navigation__arrow-prev"><img
+                                        src="img/product/arrow-prev-slider.svg"
+                                        alt="icon"></button>
+                                <button class="navigation__arrow navigation__arrow-next"><img
+                                        src="img/product/arrow-next-slider.svg"
+                                        alt="icon"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper repair-items__slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide repair-items__slide">
+                            <div class="repair-items__slide-top">
+                                <div class="swiper slider-inner__slider">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide slider-inner__slide">
+                                            <div class="slider-inner__slide-img">
+                                                <img src="img/product/repair-1.png" alt="image">
+                                            </div>
+                                        </div><!-- /slide -->
+                                        <div class="swiper-slide slider-inner__slide">
+                                            <div class="slider-inner__slide-img">
+                                                <img src="img/product/repair-2.png" alt="image">
+                                            </div>
+                                        </div><!-- /slide -->
+                                        <div class="swiper-slide slider-inner__slide">
+                                            <div class="slider-inner__slide-img">
+                                                <img src="img/product/repair-3.png" alt="image">
+                                            </div>
+                                        </div><!-- /slide -->
+                                        <div class="swiper-slide slider-inner__slide">
+                                            <div class="slider-inner__slide-img">
+                                                <img src="img/product/repair-2.png" alt="image">
+                                            </div>
+                                        </div><!-- /slide -->
+                                    </div>
+                                </div>
+                                <div class="navi-pagi">
+                                    <div class="container navi-pagi__container">
+                                        <button class="about-main__arrow about-main__arrow-prev">
+                                            <img src="img/product/arrow-prev-slider.svg" alt="icon">
+                                        </button>
+                                        <div class="pagination">
+
+                                        </div>
+                                        <button class="about-main__arrow about-main__arrow-next">
+                                            <img src="img/product/arrow-next-slider.svg" alt="icon">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="repair-items__slide-bottom">
+                                <div class="repair-items__slide-title">
+                                    Картридж для аппарата UCOS 3,0 мм / 4 МГц
+                                </div>
+                                <div class="repair-items__slide-text">
+                                    <p>
+                                        HD 1.5 — 4 MHz / длина 28 mm — глубина воздействия высокосфокусированного
+                                        ультразвука — 1.5 мм.
+                                    </p>
+                                    <p>
+                                        HD 1.5 — 4 MHz / длина 28 mm — глубина воздействия высокосфокусированного
+                                        ультразвука — 1.5 мм.
+                                    </p>
+                                    <p>
+                                        Ресурс картриджа — 10500 линий.
+                                    </p>
+                                    <p>
+                                        Возможность изменения количества точек в линии и расстояния между точками.
+                                    </p>
+                                </div>
+                            </div>
+                        </div><!-- /slide -->
+                        <div class="swiper-slide repair-items__slide">
+                            <div class="repair-items__slide-top">
+                                <div class="swiper slider-inner__slider">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide slider-inner__slide">
+                                            <div class="slider-inner__slide-img">
+                                                <img src="img/product/repair-1.png" alt="image">
+                                            </div>
+                                        </div><!-- /slide -->
+                                        <div class="swiper-slide slider-inner__slide">
+                                            <div class="slider-inner__slide-img">
+                                                <img src="img/product/repair-2.png" alt="image">
+                                            </div>
+                                        </div><!-- /slide -->
+                                        <div class="swiper-slide slider-inner__slide">
+                                            <div class="slider-inner__slide-img">
+                                                <img src="img/product/repair-3.png" alt="image">
+                                            </div>
+                                        </div><!-- /slide -->
+                                        <div class="swiper-slide slider-inner__slide">
+                                            <div class="slider-inner__slide-img">
+                                                <img src="img/product/repair-2.png" alt="image">
+                                            </div>
+                                        </div><!-- /slide -->
+                                    </div>
+                                </div>
+                                <div class="navi-pagi">
+                                    <div class="container navi-pagi__container">
+                                        <button class="about-main__arrow about-main__arrow-prev">
+                                            <img src="img/product/arrow-prev-slider.svg" alt="icon">
+                                        </button>
+                                        <div class="pagination">
+
+                                        </div>
+                                        <button class="about-main__arrow about-main__arrow-next">
+                                            <img src="img/product/arrow-next-slider.svg" alt="icon">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="repair-items__slide-bottom">
+                                <div class="repair-items__slide-title">
+                                    Картридж для аппарата UCOS 3,0 мм / 4 МГц
+                                </div>
+                                <div class="repair-items__slide-text">
+                                    <p>
+                                        HD 1.5 — 4 MHz / длина 28 mm — глубина воздействия высокосфокусированного
+                                        ультразвука — 1.5 мм.
+                                    </p>
+                                    <p>
+                                        HD 1.5 — 4 MHz / длина 28 mm — глубина воздействия высокосфокусированного
+                                        ультразвука — 1.5 мм.
+                                    </p>
+                                    <p>
+                                        Ресурс картриджа — 10500 линий.
+                                    </p>
+                                    <p>
+                                        Возможность изменения количества точек в линии и расстояния между точками.
+                                    </p>
+                                </div>
+                            </div>
+                        </div><!-- /slide -->
+                        <div class="swiper-slide repair-items__slide">
+                            <div class="repair-items__slide-top">
+                                <div class="swiper slider-inner__slider">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide slider-inner__slide">
+                                            <div class="slider-inner__slide-img">
+                                                <img src="img/product/repair-1.png" alt="image">
+                                            </div>
+                                        </div><!-- /slide -->
+                                        <div class="swiper-slide slider-inner__slide">
+                                            <div class="slider-inner__slide-img">
+                                                <img src="img/product/repair-2.png" alt="image">
+                                            </div>
+                                        </div><!-- /slide -->
+                                        <div class="swiper-slide slider-inner__slide">
+                                            <div class="slider-inner__slide-img">
+                                                <img src="img/product/repair-3.png" alt="image">
+                                            </div>
+                                        </div><!-- /slide -->
+                                        <div class="swiper-slide slider-inner__slide">
+                                            <div class="slider-inner__slide-img">
+                                                <img src="img/product/repair-2.png" alt="image">
+                                            </div>
+                                        </div><!-- /slide -->
+                                    </div>
+                                </div>
+                                <div class="navi-pagi">
+                                    <div class="container navi-pagi__container">
+                                        <button class="about-main__arrow about-main__arrow-prev">
+                                            <img src="img/product/arrow-prev-slider.svg" alt="icon">
+                                        </button>
+                                        <div class="pagination">
+
+                                        </div>
+                                        <button class="about-main__arrow about-main__arrow-next">
+                                            <img src="img/product/arrow-next-slider.svg" alt="icon">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="repair-items__slide-bottom">
+                                <div class="repair-items__slide-title">
+                                    Картридж для аппарата UCOS 3,0 мм / 4 МГц
+                                </div>
+                                <div class="repair-items__slide-text">
+                                    <p>
+                                        HD 1.5 — 4 MHz / длина 28 mm — глубина воздействия высокосфокусированного
+                                        ультразвука — 1.5 мм.
+                                    </p>
+                                    <p>
+                                        HD 1.5 — 4 MHz / длина 28 mm — глубина воздействия высокосфокусированного
+                                        ультразвука — 1.5 мм.
+                                    </p>
+                                    <p>
+                                        Ресурс картриджа — 10500 линий.
+                                    </p>
+                                    <p>
+                                        Возможность изменения количества точек в линии и расстояния между точками.
+                                    </p>
+                                </div>
+                            </div>
+                        </div><!-- /slide -->
+                        <div class="swiper-slide repair-items__slide">
+                            <div class="repair-items__slide-top">
+                                <div class="swiper slider-inner__slider">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide slider-inner__slide">
+                                            <div class="slider-inner__slide-img">
+                                                <img src="img/product/repair-1.png" alt="image">
+                                            </div>
+                                        </div><!-- /slide -->
+                                        <div class="swiper-slide slider-inner__slide">
+                                            <div class="slider-inner__slide-img">
+                                                <img src="img/product/repair-2.png" alt="image">
+                                            </div>
+                                        </div><!-- /slide -->
+                                        <div class="swiper-slide slider-inner__slide">
+                                            <div class="slider-inner__slide-img">
+                                                <img src="img/product/repair-3.png" alt="image">
+                                            </div>
+                                        </div><!-- /slide -->
+                                        <div class="swiper-slide slider-inner__slide">
+                                            <div class="slider-inner__slide-img">
+                                                <img src="img/product/repair-2.png" alt="image">
+                                            </div>
+                                        </div><!-- /slide -->
+                                    </div>
+                                </div>
+                                <div class="navi-pagi">
+                                    <div class="container navi-pagi__container">
+                                        <button class="about-main__arrow about-main__arrow-prev">
+                                            <img src="img/product/arrow-prev-slider.svg" alt="icon">
+                                        </button>
+                                        <div class="pagination">
+
+                                        </div>
+                                        <button class="about-main__arrow about-main__arrow-next">
+                                            <img src="img/product/arrow-next-slider.svg" alt="icon">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="repair-items__slide-bottom">
+                                <div class="repair-items__slide-title">
+                                    Картридж для аппарата UCOS 3,0 мм / 4 МГц
+                                </div>
+                                <div class="repair-items__slide-text">
+                                    <p>
+                                        HD 1.5 — 4 MHz / длина 28 mm — глубина воздействия высокосфокусированного
+                                        ультразвука — 1.5 мм.
+                                    </p>
+                                    <p>
+                                        HD 1.5 — 4 MHz / длина 28 mm — глубина воздействия высокосфокусированного
+                                        ультразвука — 1.5 мм.
+                                    </p>
+                                    <p>
+                                        Ресурс картриджа — 10500 линий.
+                                    </p>
+                                    <p>
+                                        Возможность изменения количества точек в линии и расстояния между точками.
+                                    </p>
+                                </div>
+                            </div>
+                        </div><!-- /slide -->
+                        <div class="swiper-slide repair-items__slide">
+                            <div class="repair-items__slide-top">
+                                <div class="swiper slider-inner__slider">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide slider-inner__slide">
+                                            <div class="slider-inner__slide-img">
+                                                <img src="img/product/repair-1.png" alt="image">
+                                            </div>
+                                        </div><!-- /slide -->
+                                        <div class="swiper-slide slider-inner__slide">
+                                            <div class="slider-inner__slide-img">
+                                                <img src="img/product/repair-2.png" alt="image">
+                                            </div>
+                                        </div><!-- /slide -->
+                                        <div class="swiper-slide slider-inner__slide">
+                                            <div class="slider-inner__slide-img">
+                                                <img src="img/product/repair-3.png" alt="image">
+                                            </div>
+                                        </div><!-- /slide -->
+                                        <div class="swiper-slide slider-inner__slide">
+                                            <div class="slider-inner__slide-img">
+                                                <img src="img/product/repair-2.png" alt="image">
+                                            </div>
+                                        </div><!-- /slide -->
+                                    </div>
+                                </div>
+                                <div class="navi-pagi">
+                                    <div class="container navi-pagi__container">
+                                        <button class="about-main__arrow about-main__arrow-prev">
+                                            <img src="img/product/arrow-prev-slider.svg" alt="icon">
+                                        </button>
+                                        <div class="pagination">
+
+                                        </div>
+                                        <button class="about-main__arrow about-main__arrow-next">
+                                            <img src="img/product/arrow-next-slider.svg" alt="icon">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="repair-items__slide-bottom">
+                                <div class="repair-items__slide-title">
+                                    Картридж для аппарата UCOS 3,0 мм / 4 МГц
+                                </div>
+                                <div class="repair-items__slide-text">
+                                    <p>
+                                        HD 1.5 — 4 MHz / длина 28 mm — глубина воздействия высокосфокусированного
+                                        ультразвука — 1.5 мм.
+                                    </p>
+                                    <p>
+                                        Возможность изменения количества точек в линии и расстояния между точками.
+                                    </p>
+                                </div>
+                            </div>
+                        </div><!-- /slide -->
+                        <div class="swiper-slide repair-items__slide">
+                            <div class="repair-items__slide-top">
+                                <div class="swiper slider-inner__slider">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide slider-inner__slide">
+                                            <div class="slider-inner__slide-img">
+                                                <img src="img/product/repair-1.png" alt="image">
+                                            </div>
+                                        </div><!-- /slide -->
+                                        <div class="swiper-slide slider-inner__slide">
+                                            <div class="slider-inner__slide-img">
+                                                <img src="img/product/repair-2.png" alt="image">
+                                            </div>
+                                        </div><!-- /slide -->
+                                        <div class="swiper-slide slider-inner__slide">
+                                            <div class="slider-inner__slide-img">
+                                                <img src="img/product/repair-3.png" alt="image">
+                                            </div>
+                                        </div><!-- /slide -->
+                                        <div class="swiper-slide slider-inner__slide">
+                                            <div class="slider-inner__slide-img">
+                                                <img src="img/product/repair-2.png" alt="image">
+                                            </div>
+                                        </div><!-- /slide -->
+                                    </div>
+                                </div>
+                                <div class="navi-pagi">
+                                    <div class="container navi-pagi__container">
+                                        <button class="about-main__arrow about-main__arrow-prev">
+                                            <img src="img/product/arrow-prev-slider.svg" alt="icon">
+                                        </button>
+                                        <div class="pagination">
+
+                                        </div>
+                                        <button class="about-main__arrow about-main__arrow-next">
+                                            <img src="img/product/arrow-next-slider.svg" alt="icon">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="repair-items__slide-bottom">
+                                <div class="repair-items__slide-title">
+                                    Картридж для аппарата UCOS 3,0 мм / 4 МГц
+                                </div>
+                                <div class="repair-items__slide-text">
+                                    <p>
+                                        HD 1.5 — 4 MHz / длина 28 mm — глубина воздействия высокосфокусированного
+                                        ультразвука — 1.5 мм.
+                                    </p>
+                                    <p>
+                                        Возможность изменения количества точек в линии и расстояния между точками.
+                                    </p>
+                                </div>
+                            </div>
+                        </div><!-- /slide -->
+                        <div class="swiper-slide repair-items__slide">
+                            <div class="repair-items__slide-top">
+                                <div class="swiper slider-inner__slider">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide slider-inner__slide">
+                                            <div class="slider-inner__slide-img">
+                                                <img src="img/product/repair-1.png" alt="image">
+                                            </div>
+                                        </div><!-- /slide -->
+                                        <div class="swiper-slide slider-inner__slide">
+                                            <div class="slider-inner__slide-img">
+                                                <img src="img/product/repair-2.png" alt="image">
+                                            </div>
+                                        </div><!-- /slide -->
+                                        <div class="swiper-slide slider-inner__slide">
+                                            <div class="slider-inner__slide-img">
+                                                <img src="img/product/repair-3.png" alt="image">
+                                            </div>
+                                        </div><!-- /slide -->
+                                        <div class="swiper-slide slider-inner__slide">
+                                            <div class="slider-inner__slide-img">
+                                                <img src="img/product/repair-2.png" alt="image">
+                                            </div>
+                                        </div><!-- /slide -->
+                                    </div>
+                                </div>
+                                <div class="navi-pagi">
+                                    <div class="container navi-pagi__container">
+                                        <button class="about-main__arrow about-main__arrow-prev">
+                                            <img src="img/product/arrow-prev-slider.svg" alt="icon">
+                                        </button>
+                                        <div class="pagination">
+
+                                        </div>
+                                        <button class="about-main__arrow about-main__arrow-next">
+                                            <img src="img/product/arrow-next-slider.svg" alt="icon">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="repair-items__slide-bottom">
+                                <div class="repair-items__slide-title">
+                                    Картридж для аппарата UCOS 3,0 мм / 4 МГц
+                                </div>
+                                <div class="repair-items__slide-text">
+                                    <p>
+                                        HD 1.5 — 4 MHz / длина 28 mm — глубина воздействия высокосфокусированного
+                                        ультразвука — 1.5 мм.
+                                    </p>
+                                    <p>
+                                        Возможность изменения количества точек в линии и расстояния между точками.
+                                    </p>
+                                </div>
+                            </div>
+                        </div><!-- /slide -->
+                        <div class="swiper-slide repair-items__slide">
+                            <div class="repair-items__slide-top">
+                                <div class="swiper slider-inner__slider">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide slider-inner__slide">
+                                            <div class="slider-inner__slide-img">
+                                                <img src="img/product/repair-1.png" alt="image">
+                                            </div>
+                                        </div><!-- /slide -->
+                                        <div class="swiper-slide slider-inner__slide">
+                                            <div class="slider-inner__slide-img">
+                                                <img src="img/product/repair-2.png" alt="image">
+                                            </div>
+                                        </div><!-- /slide -->
+                                        <div class="swiper-slide slider-inner__slide">
+                                            <div class="slider-inner__slide-img">
+                                                <img src="img/product/repair-3.png" alt="image">
+                                            </div>
+                                        </div><!-- /slide -->
+                                        <div class="swiper-slide slider-inner__slide">
+                                            <div class="slider-inner__slide-img">
+                                                <img src="img/product/repair-2.png" alt="image">
+                                            </div>
+                                        </div><!-- /slide -->
+                                    </div>
+                                </div>
+                                <div class="navi-pagi">
+                                    <div class="container navi-pagi__container">
+                                        <button class="about-main__arrow about-main__arrow-prev">
+                                            <img src="img/product/arrow-prev-slider.svg" alt="icon">
+                                        </button>
+                                        <div class="pagination">
+
+                                        </div>
+                                        <button class="about-main__arrow about-main__arrow-next">
+                                            <img src="img/product/arrow-next-slider.svg" alt="icon">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="repair-items__slide-bottom">
+                                <div class="repair-items__slide-title">
+                                    Картридж для аппарата UCOS 3,0 мм / 4 МГц
+                                </div>
+                                <div class="repair-items__slide-text">
+                                    <p>
+                                        HD 1.5 — 4 MHz / длина 28 mm — глубина воздействия высокосфокусированного
+                                        ультразвука — 1.5 мм.
+                                    </p>
+                                    <p>
+                                        Возможность изменения количества точек в линии и расстояния между точками.
+                                    </p>
+                                </div>
+                            </div>
+                        </div><!-- /slide -->
+                        <div class="swiper-slide repair-items__slide">
+                            <div class="repair-items__slide-top">
+                                <div class="swiper slider-inner__slider">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide slider-inner__slide">
+                                            <div class="slider-inner__slide-img">
+                                                <img src="img/product/repair-1.png" alt="image">
+                                            </div>
+                                        </div><!-- /slide -->
+                                        <div class="swiper-slide slider-inner__slide">
+                                            <div class="slider-inner__slide-img">
+                                                <img src="img/product/repair-2.png" alt="image">
+                                            </div>
+                                        </div><!-- /slide -->
+                                        <div class="swiper-slide slider-inner__slide">
+                                            <div class="slider-inner__slide-img">
+                                                <img src="img/product/repair-3.png" alt="image">
+                                            </div>
+                                        </div><!-- /slide -->
+                                        <div class="swiper-slide slider-inner__slide">
+                                            <div class="slider-inner__slide-img">
+                                                <img src="img/product/repair-2.png" alt="image">
+                                            </div>
+                                        </div><!-- /slide -->
+                                    </div>
+                                </div>
+                                <div class="navi-pagi">
+                                    <div class="container navi-pagi__container">
+                                        <button class="about-main__arrow about-main__arrow-prev">
+                                            <img src="img/product/arrow-prev-slider.svg" alt="icon">
+                                        </button>
+                                        <div class="pagination">
+
+                                        </div>
+                                        <button class="about-main__arrow about-main__arrow-next">
+                                            <img src="img/product/arrow-next-slider.svg" alt="icon">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="repair-items__slide-bottom">
+                                <div class="repair-items__slide-title">
+                                    Картридж для аппарата UCOS 3,0 мм / 4 МГц
+                                </div>
+                                <div class="repair-items__slide-text">
+                                    <p>
+                                        HD 1.5 — 4 MHz / длина 28 mm — глубина воздействия высокосфокусированного
+                                        ультразвука — 1.5 мм.
+                                    </p>
+                                    <p>
+                                        Возможность изменения количества точек в линии и расстояния между точками.
+                                    </p>
+                                </div>
+                            </div>
+                        </div><!-- /slide -->
+                        <div class="swiper-slide repair-items__slide">
+                            <div class="repair-items__slide-top">
+                                <div class="swiper slider-inner__slider">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide slider-inner__slide">
+                                            <div class="slider-inner__slide-img">
+                                                <img src="img/product/repair-1.png" alt="image">
+                                            </div>
+                                        </div><!-- /slide -->
+                                        <div class="swiper-slide slider-inner__slide">
+                                            <div class="slider-inner__slide-img">
+                                                <img src="img/product/repair-2.png" alt="image">
+                                            </div>
+                                        </div><!-- /slide -->
+                                        <div class="swiper-slide slider-inner__slide">
+                                            <div class="slider-inner__slide-img">
+                                                <img src="img/product/repair-3.png" alt="image">
+                                            </div>
+                                        </div><!-- /slide -->
+                                        <div class="swiper-slide slider-inner__slide">
+                                            <div class="slider-inner__slide-img">
+                                                <img src="img/product/repair-2.png" alt="image">
+                                            </div>
+                                        </div><!-- /slide -->
+                                    </div>
+                                </div>
+                                <div class="navi-pagi">
+                                    <div class="container navi-pagi__container">
+                                        <button class="about-main__arrow about-main__arrow-prev">
+                                            <img src="img/product/arrow-prev-slider.svg" alt="icon">
+                                        </button>
+                                        <div class="pagination">
+
+                                        </div>
+                                        <button class="about-main__arrow about-main__arrow-next">
+                                            <img src="img/product/arrow-next-slider.svg" alt="icon">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="repair-items__slide-bottom">
+                                <div class="repair-items__slide-title">
+                                    Картридж для аппарата UCOS 3,0 мм / 4 МГц
+                                </div>
+                                <div class="repair-items__slide-text">
+                                    <p>
+                                        HD 1.5 — 4 MHz / длина 28 mm — глубина воздействия высокосфокусированного
+                                        ультразвука — 1.5 мм.
+                                    </p>
+                                    <p>
+                                        Возможность изменения количества точек в линии и расстояния между точками.
+                                    </p>
+                                </div>
+                            </div>
+                        </div><!-- /slide -->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col nav-wrapper">
+                        <button class="navigation__arrow navigation__arrow-prev d-block d-lg-none"><img
+                                src="img/product/arrow-prev-slider.svg"
+                                alt="icon"></button>
+                        <div class="pagination-main">
+
+                        </div>
+                        <button class="navigation__arrow navigation__arrow-next d-block d-lg-none"><img
+                                src="img/product/arrow-next-slider.svg"
+                                alt="icon"></button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <button class="btn-reset repair-items__btn btn" data-graph-path="modal-repair">заказать
+                            расходники
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- recommended -->
+        <section class="recommended" id="recommended">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="recommended__title-wrapper">
+                            <h3 class="recommended__title">
+                                Другие аппараты
+                            </h3>
+                            <div class="recommended__navigation navigation d-none d-lg-block">
+                                <button class="navigation__arrow navigation__arrow-prev"><img
+                                        src="img/product/arrow-prev-slider.svg"
+                                        alt="icon"></button>
+                                <button class="navigation__arrow navigation__arrow-next"><img
+                                        src="img/product/arrow-next-slider.svg"
+                                        alt="icon"></button>
+                            </div>
+                            <a href="#" class="btn-more d-block d-lg-none">В каталог</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper recommended__slider d-none d-sm-block">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide recommended__slide"
+                             style="background-image: url('img/catalog/catalog-1.png');">
+                            <div class="recommended__slide-offer">
+                                <div class="recommended__slide-title">
+                                    Название оборудования
+                                </div>
+                                <p class="recommended__slide-descr">
+                                    Преимущество оборудование или какое-то описание на две строки
+                                </p>
+                                <a class="recommended__slide-btn btn-more" href="#">подробнее</a>
+                            </div>
+                        </div><!-- /slide -->
+                        <div class="swiper-slide recommended__slide"
+                             style="background-image: url('img/catalog/catalog-2.png');">
+                            <div class="recommended__slide-offer">
+                                <div class="recommended__slide-title">
+                                    Название оборудования
+                                </div>
+                                <p class="recommended__slide-descr">
+                                    Преимущество оборудование
+                                </p>
+                                <a class="recommended__slide-btn btn-more" href="#">подробнее</a>
+                            </div>
+                        </div><!-- /slide -->
+                        <div class="swiper-slide recommended__slide"
+                             style="background-image: url('img/catalog/catalog-3.png');">
+                            <div class="recommended__slide-offer">
+                                <div class="recommended__slide-title">
+                                    Название оборудования
+                                </div>
+                                <p class="recommended__slide-descr">
+                                    Преимущество оборудование
+                                </p>
+                                <a class="recommended__slide-btn btn-more" href="#">подробнее</a>
+                            </div>
+                        </div><!-- /slide -->
+                        <div class="swiper-slide recommended__slide"
+                             style="background-image: url('img/catalog/catalog-2.png');">
+                            <div class="recommended__slide-offer">
+                                <div class="recommended__slide-title">
+                                    Название оборудования
+                                </div>
+                                <p class="recommended__slide-descr">
+                                    Преимущество оборудование или какое-то описание на две строки
+                                </p>
+                                <a class="recommended__slide-btn btn-more" href="#">подробнее</a>
+                            </div>
+                        </div><!-- /slide -->
+                        <div class="swiper-slide recommended__slide"
+                             style="background-image: url('img/catalog/catalog-1.png');">
+                            <div class="recommended__slide-offer">
+                                <div class="recommended__slide-title">
+                                    Название оборудования
+                                </div>
+                                <p class="recommended__slide-descr">
+                                    Преимущество оборудование или какое-то описание на две строки
+                                </p>
+                                <a class="recommended__slide-btn btn-more" href="#">подробнее</a>
+                            </div>
+                        </div><!-- /slide -->
+                    </div>
+                </div>
+
+                <div class="swiper recommended__slider_sm d-block d-sm-none">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide recommended__slide">
+                            <div class="recommended__slide-item">
+                                <div class="recommended__slide-img">
+                                    <img src="img/catalog/catalog-1.png" alt="image">
+                                </div>
+                                <div class="recommended__slide-offer">
+                                    <div class="recommended__slide-title">
+                                        Название оборудования
+                                    </div>
+                                    <a class="recommended__slide-btn btn-more" href="#">подробнее</a>
+                                </div>
+                            </div>
+                            <div class="recommended__slide-item">
+                                <div class="recommended__slide-img">
+                                    <img src="img/catalog/catalog-1.png" alt="image">
+                                </div>
+                                <div class="recommended__slide-offer">
+                                    <div class="recommended__slide-title">
+                                        Название оборудования
+                                    </div>
+                                    <a class="recommended__slide-btn btn-more" href="#">подробнее</a>
+                                </div>
+                            </div>
+                        </div><!-- /slide -->
+                        <div class="swiper-slide recommended__slide">
+                            <div class="recommended__slide-item">
+                                <div class="recommended__slide-img">
+                                    <img src="img/catalog/catalog-1.png" alt="image">
+                                </div>
+                                <div class="recommended__slide-offer">
+                                    <div class="recommended__slide-title">
+                                        Название оборудования
+                                    </div>
+                                    <a class="recommended__slide-btn btn-more" href="#">подробнее</a>
+                                </div>
+                            </div>
+                            <div class="recommended__slide-item">
+                                <div class="recommended__slide-img">
+                                    <img src="img/catalog/catalog-1.png" alt="image">
+                                </div>
+                                <div class="recommended__slide-offer">
+                                    <div class="recommended__slide-title">
+                                        Название оборудования
+                                    </div>
+                                    <a class="recommended__slide-btn btn-more" href="#">подробнее</a>
+                                </div>
+                            </div>
+                        </div><!-- /slide -->
+                        <div class="swiper-slide recommended__slide">
+                            <div class="recommended__slide-item">
+                                <div class="recommended__slide-img">
+                                    <img src="img/catalog/catalog-1.png" alt="image">
+                                </div>
+                                <div class="recommended__slide-offer">
+                                    <div class="recommended__slide-title">
+                                        Название оборудования
+                                    </div>
+                                    <a class="recommended__slide-btn btn-more" href="#">подробнее</a>
+                                </div>
+                            </div>
+                            <div class="recommended__slide-item">
+                                <div class="recommended__slide-img">
+                                    <img src="img/catalog/catalog-1.png" alt="image">
+                                </div>
+                                <div class="recommended__slide-offer">
+                                    <div class="recommended__slide-title">
+                                        Название оборудования
+                                    </div>
+                                    <a class="recommended__slide-btn btn-more" href="#">подробнее</a>
+                                </div>
+                            </div>
+                        </div><!-- /slide -->
+                        <div class="swiper-slide recommended__slide">
+                            <div class="recommended__slide-item">
+                                <div class="recommended__slide-img">
+                                    <img src="img/catalog/catalog-1.png" alt="image">
+                                </div>
+                                <div class="recommended__slide-offer">
+                                    <div class="recommended__slide-title">
+                                        Название оборудования
+                                    </div>
+                                    <a class="recommended__slide-btn btn-more" href="#">подробнее</a>
+                                </div>
+                            </div>
+                            <div class="recommended__slide-item">
+                                <div class="recommended__slide-img">
+                                    <img src="img/catalog/catalog-1.png" alt="image">
+                                </div>
+                                <div class="recommended__slide-offer">
+                                    <div class="recommended__slide-title">
+                                        Название оборудования
+                                    </div>
+                                    <a class="recommended__slide-btn btn-more" href="#">подробнее</a>
+                                </div>
+                            </div>
+                        </div><!-- /slide -->
+                        <div class="swiper-slide recommended__slide">
+                            <div class="recommended__slide-item">
+                                <div class="recommended__slide-img">
+                                    <img src="img/catalog/catalog-1.png" alt="image">
+                                </div>
+                                <div class="recommended__slide-offer">
+                                    <div class="recommended__slide-title">
+                                        Название оборудования
+                                    </div>
+                                    <a class="recommended__slide-btn btn-more" href="#">подробнее</a>
+                                </div>
+                            </div>
+                            <div class="recommended__slide-item">
+                                <div class="recommended__slide-img">
+                                    <img src="img/catalog/catalog-1.png" alt="image">
+                                </div>
+                                <div class="recommended__slide-offer">
+                                    <div class="recommended__slide-title">
+                                        Название оборудования
+                                    </div>
+                                    <a class="recommended__slide-btn btn-more" href="#">подробнее</a>
+                                </div>
+                            </div>
+                        </div><!-- /slide -->
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col nav-wrapper">
+                        <button class="navigation__arrow navigation__arrow-prev d-block d-lg-none"><img
+                                src="img/product/arrow-prev-slider.svg"
+                                alt="icon"></button>
+                        <div class="pagination">
+
+                        </div>
+                        <button class="navigation__arrow navigation__arrow-next d-block d-lg-none"><img
+                                src="img/product/arrow-next-slider.svg"
+                                alt="icon"></button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <button class="btn-reset recommended__btn btn" data-graph-path="modal-order">перейти в каталог
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+{% endblock %}

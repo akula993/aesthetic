@@ -1,0 +1,25 @@
+// Colors
+$white-color: #fff;
+$white-light-color: rgba(255, 255, 255, 0.6);
+$green-color: #57B690;
+
+// Fonts
+$font-family: 'Ubuntu';
+$font-family-second: 'Prosto One';
+
+// Font-weights
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semibold: 600;
+$bold: 700;
+$extrabold: 800;
+
+ // Containers
+:root { 
+  --content-width: 1330px;
+  --content-fluid-width: 1440px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --container-fluid-width: calc(var(--content-fluid-width) + (var(--container-offset) * 2));
+}

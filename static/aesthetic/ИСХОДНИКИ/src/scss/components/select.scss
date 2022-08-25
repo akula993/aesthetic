@@ -1,0 +1,135 @@
+// Select
+.__select {
+  margin-top: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  width: 325px;
+  height: 56px; 
+  padding: 15px 20px;
+  border-radius: 20px;  
+  @media (max-width: 575px){
+    width: 100%;
+  }
+  &[data-state="active"] {
+    .__select__title {
+      &::before {
+        transform: translate(-3px, -50%) rotate(-45deg);
+      }
+
+      &::after {
+        transform: translate(3px, -50%) rotate(45deg);
+      }
+    }
+    
+    .__select__content {
+      opacity: 1;
+    }
+   
+    .__select__label + .__select__input + .__select__label {
+      max-height: 40px;
+      // border-top-width: 1px;
+    }
+  }
+}
+
+.__select__title {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  font-family: $font-family-second;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  align-items: flex-end;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;  
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    right: 20px;
+
+    display: block;
+    width: 10px;
+    height: 2px;
+
+    transition: all 0.3s ease-out;
+
+    background-color: #fff;
+
+    transform: translate(-3px, -50%) rotate(45deg);
+  }
+  &::after {
+    transform: translate(3px, -50%) rotate(-45deg);
+  }
+
+  &:hover {
+    border-color: #D8093A;
+
+    &::before,
+    &::after {
+      background-color: #fff;
+    }
+  }
+}
+.__select__content {
+  position: absolute;
+  top: 60px;
+  left: 3px;
+  display: flex;
+  flex-direction: column;
+  width: 325px;
+  background-color: rgba(58, 51, 48, 0.6);
+  border: none;
+  transition: all 0.3s ease-out;
+  opacity: 0;
+  z-index: 8;
+  border-radius: 30px;
+  padding: 30px;
+  @media (max-width: 575px){
+    width: 100%;
+  }
+}
+.__select__input {
+  display: none;
+
+  &:checked + label {
+    background-color: transparent;
+  }
+  &:disabled + label {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+}
+.__select__label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  max-height: 0;
+  padding: 0;
+  font-family: $font-family-second;
+  
+  transition: all 0.2s ease-out;
+
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.6);
+  
+  overflow: hidden;
+
+  & + input + & {
+    border-top: 0 solid #C7CCD160;
+  }
+
+  &:hover {
+    background-color: transparent;
+
+    color: #ffffff;
+  }
+}

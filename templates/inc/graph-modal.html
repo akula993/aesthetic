@@ -1,0 +1,220 @@
+{% load static %}
+
+<div class="graph-modal">
+
+
+    <div class="graph-modal__container modal-commerce__container modal-commerce" role="dialog" aria-modal="true"
+         data-graph-target="modal-commerce">
+        <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
+        <div class="graph-modal__content">
+            <h3 class="modal-commerce__title">Запрос коммерческого предложения</h3>
+            <p class="modal-commerce__descr">
+                Оказывать медицинские услуги могут юридические лица, имеющие лицензию, дающую право на оказание
+                медицинской
+                деятельности.
+                Для того, чтобы мы выслали вам коммерческое предложение заполните форму ниже.
+            </p>
+            <div class="footer-form__content">
+                <div class="input-wrapper">
+                    <input type="text" class="footer-form__input" placeholder="Контактное лицо">
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" class="footer-form__input" placeholder="Контактное лицо">
+                </div>
+                <div class="input-wrapper">
+                    <input type="tel" class="footer-form__input" placeholder="Телефон">
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" class="footer-form__input" placeholder="Название клиники">
+                </div>
+
+            </div>
+            <div class="interests">
+                <div class="interests__title">
+                    Укажите какое оборудование вас интересует:
+                </div>
+                <ul class="interests__list">
+                    <li class="interests__item">
+                        <input class="interests__cb" type="checkbox" id="interests__cb_1">
+                        <label for="interests__cb_1">UCOS HIFU - аппаратный SMAS лифтинг</label>
+                    </li>
+                    <li class="interests__item">
+                        <input class="interests__cb" type="checkbox" id="interests__cb_2">
+                        <label for="interests__cb_2">DeAgeEX DUAL - Фракционные микроиглы</label>
+                    </li>
+                    <li class="interests__item">
+                        <input class="interests__cb" type="checkbox" id="interests__cb_3">
+                        <label for="interests__cb_3">Vesta - Фракционный CO2 лазер</label>
+                    </li>
+                    <li class="interests__item">
+                        <input class="interests__cb" type="checkbox" id="interests__cb_4">
+                        <label for="interests__cb_4">Selene 808 - Диодный лазер для эпиляции</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="input-wrapper">
+        <textarea class="footer-form__textarea" name="textarea-commerce" id="textarea-commerce" cols="30" rows="10"
+                  placeholder="Примечание"></textarea>
+            </div>
+            <div class="agreement">
+                <label class="footer-form__checkbox-label" for="modal-commerce-agree">
+                    <input type="checkbox" id="modal-commerce-agree">
+                    <div class="agreement__text">
+                        Соглашаюсь на обработку <a href="#">персональных данных</a>
+                    </div>
+                </label>
+            </div>
+            <button class="footer-form__btn btn" type="submit">отправить</button>
+        </div>
+    </div>
+
+    <div class="graph-modal__container modal-repair__container modal-repair" role="dialog" aria-modal="true"
+         data-graph-target="modal-repair">
+        <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
+        <div class="graph-modal__content">
+            <h3 class="modal-commerce__title">Заказать расходник</h3>
+            <p class="modal-commerce__descr">
+                После оформления заявки с Вами свяжется менеджер для уточнения деталей заказа.
+            </p>
+            <div class="footer-form__content">
+                <div class="input-wrapper">
+          <textarea class="footer-form__textarea" name="repair-textarea" id="repair-textarea" cols="30" rows="10"
+                    placeholder="Какие расходные материалы вас интересуют?"></textarea>
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" class="footer-form__input" placeholder="Контактное лицо">
+                </div>
+                <div class="input-wrapper">
+                    <input type="email" class="footer-form__input" placeholder="Email">
+                </div>
+                <div class="input-wrapper">
+                    <input type="tel" class="footer-form__input" placeholder="Телефон">
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" class="footer-form__input" placeholder="Ваш город">
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" class="footer-form__input" placeholder="Название клиники">
+                </div>
+            </div>
+
+            <div class="wrapper-btn">
+                <div class="agreement">
+                    <label class="footer-form__checkbox-label" for="modal-repair-agree">
+                        <input type="checkbox" id="modal-repair-agree">
+                        <div class="agreement__text">
+                            Соглашаюсь на обработку <a href="#">персональных данных</a>
+                        </div>
+                    </label>
+                </div>
+                <button class="footer-form__btn btn" type="submit">заказать</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="graph-modal__container modal-start__container modal-start" role="dialog" aria-modal="true"
+         data-graph-target="modal-start">
+        <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
+        <div class="graph-modal__content">
+            <h3 class="modal-commerce__title modal-start__title">Принять участие</h3>
+            <div class="footer-form__content">
+                <div class="input-wrapper">
+                    <select name="modal-start-select" id="modal-start-select">
+                        <option value="1 урок">Название ближайшего занятия</option>
+                        <option value="1 урок">1 урок</option>
+                        <option value="2 урок">2 урок</option>
+                        <option value="3 урок">3 урок</option>
+                        <option value="4 урок">4 урок</option>
+                    </select>
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" class="footer-form__input" placeholder="Имя">
+                </div>
+                <div class="input-wrapper">
+                    <input type="email" class="footer-form__input" placeholder="Email">
+                </div>
+                <div class="input-wrapper">
+                    <input type="tel" class="footer-form__input" placeholder="Телефон">
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" class="footer-form__input" placeholder="Ваш город">
+                </div>
+            </div>
+
+            <div class="wrapper-btn">
+                <div class="agreement">
+                    <label class="footer-form__checkbox-label" for="modal-repair-agree">
+                        <input type="checkbox" id="modal-repair-agree">
+                        <div class="agreement__text">
+                            Соглашаюсь на обработку <a href="#">персональных данных</a>
+                        </div>
+                    </label>
+                </div>
+                <button class="footer-form__btn btn" type="submit">заказать</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="graph-modal__container modal-sertificate__container modal-sertificate" role="dialog"
+         aria-modal="true"
+         data-graph-target="modal-sertificate">
+        <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
+        <div class="graph-modal__content">
+            <h3 class="modal-commerce__title modal-sertificate__title">Иванова М.В.</h3>
+            <div class="footer-form__content">
+                <div class="modal-sertificate__item">
+                    <div class="modal-sertificate__item-title">
+                        Название аппарата
+                    </div>
+                    <div class="modal-sertificate__item-text">
+                        2021 год обучения
+                    </div>
+                </div>
+                <div class="modal-sertificate__item">
+                    <div class="modal-sertificate__item-title">
+                        Название аппарата
+                    </div>
+                    <div class="modal-sertificate__item-text">
+                        2021 год обучения
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="graph-modal__container modal-call__container modal-call" role="dialog" aria-modal="true"
+         data-graph-target="modal-call">
+        <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
+        <div class="graph-modal__content">
+            <h3 class="modal-commerce__title modal-call__title">Уведомить меня о ближайшем мероприятии</h3>
+            <p class="modal-commerce__descr">
+                Подписаться на уведомления о предстоящих мероприятиях
+            </p>
+            <div class="footer-form__content">
+                <div class="input-wrapper">
+                    <input type="text" class="footer-form__input" placeholder="Имя">
+                </div>
+                <div class="input-wrapper">
+                    <input type="email" class="footer-form__input" placeholder="Email">
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" class="footer-form__input" placeholder="Ваш город">
+                </div>
+                <div class="agreement">
+                    <label class="footer-form__checkbox-label" for="modal-call-agree">
+                        <input type="checkbox" id="modal-call-agree">
+                        <div class="agreement__text">
+                            Соглашаюсь на обработку <a href="#">персональных данных</a>
+                        </div>
+                    </label>
+                </div>
+                <button class="footer-form__btn btn" type="submit">отправить</button>
+
+            </div>
+        </div>
+    </div>
+
+
+</div>

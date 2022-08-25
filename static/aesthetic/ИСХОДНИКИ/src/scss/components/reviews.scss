@@ -1,0 +1,179 @@
+// reviews
+.reviews {
+  @media (max-width: 767px){
+    overflow: hidden;
+  }
+  &__title {
+    margin-bottom: 45px;
+    @media (max-width: 991px){
+      margin-bottom: 30px;
+    }
+    
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  .navigation__arrow {
+    opacity: .8;
+    transition: opacity .2s linear;
+    &.swiper-button-disabled {
+      opacity: .2;
+      &:hover {
+        opacity: .2;
+      }
+    }
+    &:hover {
+      opacity: 1;
+    }
+  }
+  .navigation__arrow-prev {
+    margin-right: 8px;
+  }
+  .navigation__arrow-next {
+    margin-left: 8px;
+  }
+  .video-js {
+    width: 100%;
+    height: 240px;
+    @media (max-width: 991px){
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    @media (max-width: 575px){
+      height: 200px;
+    }
+   
+    &:hover {
+      .vjs-big-play-button {
+        background-color: transparent;
+      }
+      .vjs-poster::after {
+        background-color: rgba(#000, .1);
+      }
+    }
+  }
+  .btn-more {
+    @media (max-width: 400px){
+      top: 7px;
+    }
+  }
+  .video-js .vjs-big-play-button .vjs-icon-placeholder:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: url('@img/product/review-play-video.svg') no-repeat center center / contain;
+  }
+  .video-js .vjs-big-play-button {
+    background-color: transparent;
+    transition: opacity .2s linear!important;
+    border: none;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: translateY(-50%);
+    width: 56px;
+    height: 56px;
+    &:hover {
+      background-color: transparent;
+      outline: none;
+    }
+    &:focus-within {
+      background-color: transparent;
+      outline: none;
+    }
+    &:focus {
+      background-color: transparent;
+      outline: none;
+    }
+  } 
+ .nav-wrapper {
+   @media (max-width: 991px){
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin-top: 30px;
+   }
+ }
+ &__slider {
+  @media (max-width: 767px){
+    overflow: visible; 
+    padding-right: 60px;
+  }   
+ }
+  &__slide {
+    &-bottom {
+      margin-top: 30px;
+      @media (max-width: 991px){
+        margin-top: 15px;
+      }
+   }
+    &-name {
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 24px;
+      text-align: center;
+      letter-spacing: 0.05em;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 2px;
+    }
+    &-work {      
+      font-size: 13px;
+      line-height: 18px;
+      text-align: center;
+      letter-spacing: 0.03em;      
+      color: rgba(255, 255, 255, 0.4);
+      margin-bottom: 20px;
+    }
+    &-company {
+      font-family: $font-family-second;
+      font-size: 18px;
+      line-height: 24px;
+      text-align: center;
+      letter-spacing: 0.02em;
+      color: #FFFFFF;    
+      @media (max-width: 991px){
+        font-size: 15px;
+        line-height: 20px;
+      }  
+    }
+  }
+  .pagination {
+    height: 12px;
+    justify-content: center;
+    width: fit-content;
+    position: unset;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 40px;
+    @media (max-width: 991px){
+      margin: 0 0 0 0;
+    }
+  }
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    opacity: 1;
+    background-color: transparent;
+    transition: width .2s linear, border .2s linear;
+  }
+  .swiper-pagination-bullet-active {
+    width: 36px;
+    border: 2px solid $green-color;
+    border-radius: 12px;
+  }
+  .vjs-poster {
+    background-size: cover;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(#000, .3);
+      transition: background-color .2s linear;
+    }
+  }
+}

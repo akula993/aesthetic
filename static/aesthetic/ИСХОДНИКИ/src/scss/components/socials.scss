@@ -1,0 +1,33 @@
+// socials
+.socials {
+  &__list {
+    display: flex;
+  }
+  li {
+   
+    &:not(:last-child) {
+      margin-right: 12px;      
+    }  
+    a svg path {
+      transition: stroke .2s linear;
+    }
+    a:hover {
+      opacity: 1;
+      svg path {
+        stroke: #57B690;      
+      }     
+    }
+  }
+}
+.intro-article__socials {
+  display: flex;
+  align-items: center;
+  &-text {
+    margin-right: 15px;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.8);
+    
+  }
+}

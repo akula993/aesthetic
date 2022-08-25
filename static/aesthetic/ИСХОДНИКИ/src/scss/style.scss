@@ -1,0 +1,51 @@
+// стили для модального окна
+@import "../../node_modules/graph-modal/dist/graph-modal.min";
+// стили для табов
+@import "../../node_modules/graph-tabs/dist/graph-tabs.min";
+
+// стили для библиотеки aos
+// @import "../../node_modules/aos/dist/aos";
+
+// стили для свайпера
+@import "../../node_modules/swiper/swiper-bundle.min";
+
+// @import "../../node_modules/simplebar/dist/simplebar.min";
+// Базовые подключения
+@import 'bootstrap.min';
+@import 'vars';
+@import 'mixins';
+@import 'fonts';
+@import 'reset';
+@import 'specifications';
+
+// Подключения компонентов страницы
+@import "./components/socials";
+@import "./components/burger";
+@import "./components/btn";
+@import "./components/header";
+@import "./components/intro";
+@import "./components/advantages";
+@import "./components/catalog";
+@import "./components/helping";
+@import "./components/events";
+@import "./components/about";
+@import "./components/articles-main";
+@import "./components/footer";
+@import "./components/about-product";
+@import "./components/commerce-order";
+@import "./components/product-tabs";
+@import "./components/reviews";
+@import "./components/repair-items";
+@import "./components/recommended";
+@import "./components/article";
+@import "./components/archives";
+@import "./components/calendar";
+@import "./components/matherials";
+@import "./components/sertificate";
+@import "./components/partners";
+@import "./components/contacts";
+@import "./components/select";
+@import "./components/modal";
+
+
+

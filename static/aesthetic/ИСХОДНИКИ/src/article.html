@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html',{
+"title":"Страница публикации"
+})
+
+<body>
+	
+	<div class="wrapper">
+		@@include('html/header.html',{})
+		<main class="main first">
+			@@include('html/intro-article.html',{})
+			@@include('html/article.html',{})
+		
+		</main>
+		@@include('html/footer.html',{})
+	</div>
+	
+	<script src="//vjs.zencdn.net/7.10.2/video.min.js"></script>
+	<script src="js/app.min.js"></script>
+	<script>
+		
+function elementInViewport(el){
+  var bounds = el.getBoundingClientRect();
+  return (
+      (bounds.top + bounds.height > 0) && // Елемент ниже верхней границы
+      (window.innerHeight - bounds.top > 0) && // Выше нижней
+      (bounds.left + bounds.width > 0) && // Правее левой
+      (window.innerWidth - bounds.left > 0)// Левее правой
+  );
+}
+
+
+document.addEventListener("scroll", (e) => {
+  var el3 = document.querySelector("#article__title-3");
+  var el2 = document.querySelector("#article__title-2");
+  var el1 = document.querySelector("#article__title-1");
+  var el4 = document.querySelector("#article__title-4");
+  var inViewport3 = elementInViewport(el3);
+  var inViewport2 = elementInViewport(el2);
+  var inViewport1 = elementInViewport(el1);
+  var inViewport4 = elementInViewport(el4);
+  
+
+  if(inViewport1) {
+    document.querySelector("#article-link_1").style.opacity = 1;
+    let liEl1 = document.querySelector("#article-link_1").closest('li');    
+    liEl1.classList.add('active');    
+  } else {
+    document.querySelector("#article-link_1").style.opacity = 0.7;
+    let liEl1 = document.querySelector("#article-link_1").closest('li');  
+    liEl1.classList.remove('active');
+  }
+  if(inViewport2) {
+    document.querySelector("#article-link_2").style.opacity = 1;
+    let liEl2 = document.querySelector("#article-link_2").closest('li');    
+    liEl2.classList.add('active');
+  } else {
+    document.querySelector("#article-link_2").style.opacity = 0.7;
+    let liEl2 = document.querySelector("#article-link_2").closest('li');  
+    liEl2.classList.remove('active');
+  }
+  if(inViewport3) {
+    document.querySelector("#article-link_3").style.opacity = 1;
+    let liEl3 = document.querySelector("#article-link_3").closest('li');    
+    liEl3.classList.add('active');
+  } else {
+    document.querySelector("#article-link_3").style.opacity = 0.7;
+    let liEl3 = document.querySelector("#article-link_3").closest('li');  
+    liEl3.classList.remove('active');
+  }
+  if(inViewport4) {
+    document.querySelector("#article-link_4").style.opacity = 1;
+    let liEl4 = document.querySelector("#article-link_4").closest('li');    
+    liEl4.classList.add('active');
+  } else {
+    document.querySelector("#article-link_4").style.opacity = 0.7;
+    let liEl4 = document.querySelector("#article-link_4").closest('li');  
+    liEl4.classList.remove('active');
+  } 
+})
+	</script>
+</body>
+
+</html>
+
+
+
+

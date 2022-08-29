@@ -6,33 +6,33 @@ from django.contrib.flatpages.models import FlatPage
 from django.utils.translation import gettext_lazy as _
 from django.utils.safestring import mark_safe
 
-from products.models import Product, Intro, Events
+from products.models import Product, Intro, Events, Partners, City
 
 
-# Define a new FlatPageAdmin
-class FlatPageAdmin(FlatPageAdmin):
-    fieldsets = (
-        (None, {'fields': ('url', 'title', 'content', 'sites')}),
-        (_('Advanced options'), {
-            'classes': ('collapse',),
-            'fields': (
-                'enable_comments',
-                'registration_required',
-                'template_name',
-            ),
-        }),
-    )
-
-# Re-register FlatPageAdmin
-admin.site.unregister(FlatPage)
-admin.site.register(FlatPage, FlatPageAdmin)
-
+# # Define a new FlatPageAdmin
+# class FlatPageAdmin(FlatPageAdmin):
+#     fieldsets = (
+#         (None, {'fields': ('url', 'title', 'content', 'sites')}),
+#         (_('Advanced options'), {
+#             'classes': ('collapse',),
+#             'fields': (
+#                 'enable_comments',
+#                 'registration_required',
+#                 'template_name',
+#             ),
+#         }),
+#     )
+#
+# # Re-register FlatPageAdmin
+# admin.site.unregister(FlatPage)
+# admin.site.register(FlatPage, FlatPageAdmin)
 
 
 class EventsAdminForm(forms.ModelForm):
     description = forms.CharField(widget=CKEditorUploadingWidget(), label='Основные направления')
-    training_formats= forms.CharField(widget=CKEditorUploadingWidget(), label='Форма обучения')
-    learning_conditions= forms.CharField(widget=CKEditorUploadingWidget(), label='Условия обучения')
+    training_formats = forms.CharField(widget=CKEditorUploadingWidget(), label='Форма обучения')
+    learning_conditions = forms.CharField(widget=CKEditorUploadingWidget(), label='Условия обучения')
+
     class Meta:
         model = Events
         fields = '__all__'
@@ -60,8 +60,8 @@ class IntroInline(admin.TabularInline):
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
     list_display = ('name', 'url', 'image', 'get_image', 'power', 'number_of_mode', 'views')
-    list_filter = ('product__name',)
-    search_fields = ('product__name',)
+    list_filter = ('product__name', 'partners',)
+    search_fields = ('product__name', 'partners',)
     list_editable = ('power', 'number_of_mode',)
     prepopulated_fields = {'url': ('name',), }
     save_on_top = True
@@ -82,7 +82,7 @@ class ProductAdmin(admin.ModelAdmin):
         }),
         ('Об аппарате', {
             'classes': ('collapse',),
-            'fields': ('indications_and_principle_of_operation',
+            'fields': (('indications_and_principle_of_operation','partners'),
                        ('cartridges', 'results_of_procedures', 'features_of_the_device',),),
             'description': "Укажите доп сведения об аппарате."
         }),
@@ -116,3 +116,26 @@ class EventsAdmin(admin.ModelAdmin):
     actions_on_top = True
     save_as = True
     form = EventsAdminForm
+
+
+class CityInline(admin.TabularInline):
+    """Интро на странице фильтра"""
+    model = City
+    extra = 0
+    # show_change_link = True
+    verbose_name = 'Добавить город партнера?'
+    verbose_name_plural = 'Добавить город партнера?'
+    # min_num = 0
+    # max_num = 4
+
+
+@admin.register(Partners)
+class Partners(admin.ModelAdmin):
+    list_display = ('title', 'url',)
+    # list_filter = ('product_comp__name',)
+    # search_fields = ('product_comp__name',)
+    prepopulated_fields = {'url': ('title',), }
+    save_on_top = True
+    actions_on_top = True
+    save_as = True
+    inlines = [CityInline]

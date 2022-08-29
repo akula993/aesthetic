@@ -11,7 +11,7 @@ from django.utils import timezone
 from django.views import View
 from django.views.generic import ListView, DetailView
 
-from products.models import Product, Intro, Events
+from products.models import Product, Intro, Events, Partners
 from products.services import open_file
 
 
@@ -88,6 +88,7 @@ class EventsViews(ListView):
     #     passed = Events.objects.filter(article_date__lt=now).order_by('-article_date')
     #     return list(upcoming) + list(passed)
 
+
 class EventsDetailView(DetailView):
     model = Events
     template_name = 'product/events/event.html'
@@ -102,3 +103,29 @@ class EventsDetailView(DetailView):
         context = self.get_context_data(object=self.object)
         return self.render_to_response(context)
 
+
+class PartnersViews(ListView):
+    model = Partners
+    template_name = 'partners.html'
+    context_object_name = 'partners'
+    slug_field = 'url'
+    extra_context = {'title': 'Партнеры'}
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['prod_comp'] = Product.objects.all()
+        return context
+
+class PartnerDetailView(DetailView):
+    model = Partners
+    template_name = 'partner.html'
+    context_object_name = 'partner'
+    slug_field = 'url'
+    extra_context = {'title': 'Партнеры'}
+
+    def get(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        self.object.views += 1
+        self.object.save()
+        context = self.get_context_data(object=self.object)
+        return self.render_to_response(context)

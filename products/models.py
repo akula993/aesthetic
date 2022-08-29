@@ -12,9 +12,7 @@ class Product(models.Model):
     url = models.SlugField('URL', max_length=150)
     file = models.FileField(upload_to='product_video', validators=[FileExtensionValidator(allowed_extensions=['mp4'])],
                             blank=True, null=True)
-
     description = models.TextField(blank=True, null=True)
-
     image = models.ImageField(verbose_name='Картинка', upload_to='product', blank=True, null=True)
     power = models.IntegerField(verbose_name='Мощьность', default=500, blank=True, null=True)
     number_of_mode = models.IntegerField(verbose_name='Число режимов', default=12, blank=True, null=True)
@@ -27,7 +25,8 @@ class Product(models.Model):
                                              default='Скоро будет')
     features_of_the_device = models.CharField(max_length=450, verbose_name='Особенности аппарата', blank=True,
                                               default='Скоро будет', null=True)
-
+    partners = models.ManyToManyField('Partners', related_name='prod',
+                                verbose_name='Название продукта', null=True, blank=True, )
     def __str__(self):
         return self.name
 
@@ -64,7 +63,7 @@ class Events(models.Model):
     text = models.CharField(max_length=350, blank=True, null=True, verbose_name='Краткое описание')
     data_up = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
     article_date = models.DateTimeField(verbose_name='Дата мероприятия')
-    training_formats = models.TextField(verbose_name='Форма обучения', blank=True, null=True,)
+    training_formats = models.TextField(verbose_name='Форма обучения', blank=True, null=True, )
     description = models.TextField(blank=True, null=True, verbose_name='Основные направления')
     learning_conditions = models.TextField(blank=True, null=True, verbose_name='Условия обучения')
     views = models.IntegerField(verbose_name='Просмотры', null=True, blank=True, default=0)
@@ -83,12 +82,6 @@ class Events(models.Model):
 # Reviews
 
 
-
-
-
-
-
-
 class Schools(models.Model):
     pass
 
@@ -98,11 +91,31 @@ class Schools(models.Model):
 
 
 class Partners(models.Model):
-    pass
+    title = models.CharField('Название занятия', max_length=150, null=True, blank=True, )
+    url = models.SlugField('URL', max_length=150, null=True, blank=True, )
+    data_up = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания', null=True, blank=True, )
+
+    views = models.IntegerField(verbose_name='Просмотры', null=True, blank=True, default=0)
+    logo = models.ImageField(verbose_name='Логотип партнера', upload_to='partners', null=True, blank=True, )
+
+    def __str__(self):
+        return self.title
+
+    def get_absolute_url(self):
+        return reverse('partner_detail', kwargs={'slug': self.url})
 
     class Meta:
         verbose_name = 'Партнер'
         verbose_name_plural = 'Партнеры'
+
+
+class City(models.Model):
+    name = models.CharField(max_length=250, verbose_name='Название города')
+    partners = models.ForeignKey(Partners, on_delete=models.CASCADE, related_name='partners', null=True, blank=True,
+                                 verbose_name='Продукт')
+
+    def __str__(self):
+        return self.name
 
 
 class Staff(models.Model):
@@ -112,11 +125,10 @@ class Staff(models.Model):
         verbose_name = 'Сотрудник'
         verbose_name_plural = 'Сотрудники'
 
+
 class Contacts(models.Model):
     pass
+
     class Meta:
         verbose_name = 'Контакт'
         verbose_name_plural = 'Контакты'
-
-
-

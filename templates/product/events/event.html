@@ -1,0 +1,301 @@
+{% extends 'product/event_base.html' %}
+{% load static %}
+{% block title_event %}
+    <h1 class="intro-events__title">
+                                {{ event.title }}</h1>
+                            <div class="intro-events__subtitle">{{ event.text }}</div>
+{% endblock title_event %}
+{% block intro_events %}
+
+        <a class="intro-product__btn intro-events__btn" href="{% url 'events' %}">
+            <div class="intro-product__btn-text intro-events__btn-text">
+                Календарь мероприятий
+            </div>
+            <img src="{% static 'img/icons/arrows.svg' %}" alt="arrows">
+        </a>
+
+
+    {% endblock intro_events %}
+{% block events %}
+
+    <section class="events" id="events">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="article__wrapper">
+                        <div class="article__title" id="article__title-1">Основные направления</div>
+                        <p>
+                            {{ event.description|safe }}
+                        </p>
+                        <div class="article__title" id="article__title-2">Форматы обучения</div>
+                        <p>
+                            Сложно сказать, почему непосредственные участники технического прогресса призывают нас к
+                            новым свершениям,
+                            которые, в свою очередь, должны быть разоблачены.
+                        </p>
+                        <div class="format">
+                            <ul class="format__list">
+                                <li class="format__item">
+                                    <div class="format__item-img">
+                                        <img src="img/articles/articles-main1.png" alt="format-image">
+                                    </div>
+                                    <div class="format__item-title">Формат 1</div>
+                                </li>
+                                <li class="format__item">
+                                    <div class="format__item-img">
+                                        <img src="img/articles/articles-main2.png" alt="format-image">
+                                    </div>
+                                    <div class="format__item-title">Формат 1</div>
+                                </li>
+                                <li class="format__item">
+                                    <div class="format__item-img">
+                                        <img src="img/articles/articles-main3.png" alt="format-image">
+                                    </div>
+                                    <div class="format__item-title">Формат 3</div>
+                                </li>
+                            </ul>
+                        </div><!-- /format -->
+                        <div class="article__title" id="article__title-4">Условия обучения</div>
+                        <p>
+                            Высококачественный прототип будущего проекта предопределяет высокую востребованность
+                            стандартных подходов. Сложно сказать, почему непосредственные участники технического
+                            прогресса призывают нас к новым свершениям, которые, в свою очередь, должны быть
+                            разоблачены. Не следует, однако, забывать, что понимание сути ресурсосберегающих технологий
+                            не оставляет шанса для своевременного выполнения сверхзадачи.Высококачественный прототип
+                            будущего проекта предопределяет высокую востребованность стандартных подходов.
+                        </p>
+                        <p>
+                            Сложно сказать, почему непосредственные участники технического прогресса призывают нас к
+                            новым свершениям, которые, в свою очередь, должны быть разоблачены. Не следует, однако,
+                            забывать, что понимание сути ресурсосберегающих технологий не оставляет шанса для
+                            своевременного выполнения сверхзадачи.
+                        </p>
+
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                                        {% include 'product/events/inc/menu.html' %}
+
+                    <div class="events__soon">
+                        <div class="events__soon-title">
+                            Ближайшие мероприятия:
+                        </div>
+                        <ul class="events__soon-list">
+                            <li class="events__soon-item">
+                                <div class="events__soon-item-title">
+                                    Название ближайшего мероприятия
+                                </div>
+                                <div class="events__soon-item-date">10 мая 2022</div>
+                                <div class="events__soon-item-time">
+                                    12:00-15:00
+                                </div>
+                                <p class="events__soon-item-text">
+                                    В рамках спецификации современных стандартов, интерактивные прототипы призывают нас
+                                    к новым свершениям, которые, в свою очередь, должны быть описаны максимально
+                                    подробно.
+                                </p>
+                                <a href="#" class="events__soon-item-btn btn-more">подробнее</a>
+                            </li>
+                            <li class="events__soon-item">
+                                <div class="events__soon-item-title">
+                                    Название ближайшего мероприятия
+                                </div>
+                                <div class="events__soon-item-date">10 мая 2022</div>
+                                <div class="events__soon-item-time">
+                                    12:00-15:00
+                                </div>
+                                <p class="events__soon-item-text">
+                                    В рамках спецификации современных стандартов, интерактивные прототипы призывают нас
+                                    к новым свершениям, которые, в свою очередь, должны быть описаны максимально
+                                    подробно.
+                                </p>
+                                <a href="#" class="events__soon-item-btn btn-more">подробнее</a>
+                            </li>
+                            <li class="events__soon-item">
+                                <div class="events__soon-item-title">
+                                    Название ближайшего мероприятия
+                                </div>
+                                <div class="events__soon-item-date">10 мая 2022</div>
+                                <div class="events__soon-item-time">
+                                    12:00-15:00
+                                </div>
+                                <p class="events__soon-item-text">
+                                    В рамках спецификации современных стандартов, интерактивные прототипы призывают нас
+                                    к новым свершениям, которые, в свою очередь, должны быть описаны максимально
+                                    подробно.
+                                </p>
+                                <a href="#" class="events__soon-item-btn btn-more">подробнее</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- reviews -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="reviews__title-wrapper">
+                        <h3 class="reviews__title">
+                            Отзывы
+                        </h3>
+                        <div class="reviews__navigation navigation d-none d-lg-block">
+                            <button class="navigation__arrow navigation__arrow-prev"><img
+                                    src="img/product/arrow-prev-slider.svg"
+                                    alt="icon"></button>
+                            <button class="navigation__arrow navigation__arrow-next"><img
+                                    src="img/product/arrow-next-slider.svg"
+                                    alt="icon"></button>
+                        </div>
+                        <a href="#" class="btn-more d-block d-lg-none">Все отзывы</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper reviews__slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide reviews__slide">
+                        <div class="reviews__slide-top">
+                            <video class="video-js" controls preload="auto" poster="img/product/poster-about.png"
+                                   data-setup='{}'>
+                                <source src="img/1.mp4" type="video/mp4">
+                                </source>
+                                <source src="img/1.mp4" type="video/webm">
+                                </source>
+                                <source src="img/1.mp4" type="video/ogg">
+                                </source>
+                                <p class="vjs-no-js">
+                                    To view this video please enable JavaScript, and consider upgrading to a
+                                    web browser that
+                                    <a href="https://videojs.com/html5-video-support/" target="_blank">
+                                        supports HTML5 video
+                                    </a>
+                                </p>
+                            </video>
+                        </div>
+                        <div class="reviews__slide-bottom">
+                            <div class="reviews__slide-name">Фамилия Имя Отчество</div>
+                            <div class="reviews__slide-work">Должность</div>
+                            <div class="reviews__slide-company">Компания</div>
+                        </div>
+                    </div><!-- /slide -->
+                    <div class="swiper-slide reviews__slide">
+                        <div class="reviews__slide-top">
+                            <video class="video-js" controls preload="auto" poster="img/product/poster-about.png"
+                                   data-setup='{}'>
+                                <source src="img/1.mp4" type="video/mp4">
+                                </source>
+                                <source src="img/1.mp4" type="video/webm">
+                                </source>
+                                <source src="img/1.mp4" type="video/ogg">
+                                </source>
+                                <p class="vjs-no-js">
+                                    To view this video please enable JavaScript, and consider upgrading to a
+                                    web browser that
+                                    <a href="https://videojs.com/html5-video-support/" target="_blank">
+                                        supports HTML5 video
+                                    </a>
+                                </p>
+                            </video>
+                        </div>
+                        <div class="reviews__slide-bottom">
+                            <div class="reviews__slide-name">Фамилия Имя Отчество</div>
+                            <div class="reviews__slide-work">Должность</div>
+                            <div class="reviews__slide-company">Компания</div>
+                        </div>
+                    </div><!-- /slide -->
+                    <div class="swiper-slide reviews__slide">
+                        <div class="reviews__slide-top">
+                            <video class="video-js" controls preload="auto" poster="img/product/poster-about.png"
+                                   data-setup='{}'>
+                                <source src="img/1.mp4" type="video/mp4">
+                                </source>
+                                <source src="img/1.mp4" type="video/webm">
+                                </source>
+                                <source src="img/1.mp4" type="video/ogg">
+                                </source>
+                                <p class="vjs-no-js">
+                                    To view this video please enable JavaScript, and consider upgrading to a
+                                    web browser that
+                                    <a href="https://videojs.com/html5-video-support/" target="_blank">
+                                        supports HTML5 video
+                                    </a>
+                                </p>
+                            </video>
+                        </div>
+                        <div class="reviews__slide-bottom">
+                            <div class="reviews__slide-name">Фамилия Имя Отчество</div>
+                            <div class="reviews__slide-work">Должность</div>
+                            <div class="reviews__slide-company">Компания</div>
+                        </div>
+                    </div><!-- /slide -->
+                    <div class="swiper-slide reviews__slide">
+                        <div class="reviews__slide-top">
+                            <video class="video-js" controls preload="auto" poster="img/product/poster-about.png"
+                                   data-setup='{}'>
+                                <source src="img/1.mp4" type="video/mp4">
+                                </source>
+                                <source src="img/1.mp4" type="video/webm">
+                                </source>
+                                <source src="img/1.mp4" type="video/ogg">
+                                </source>
+                                <p class="vjs-no-js">
+                                    To view this video please enable JavaScript, and consider upgrading to a
+                                    web browser that
+                                    <a href="https://videojs.com/html5-video-support/" target="_blank">
+                                        supports HTML5 video
+                                    </a>
+                                </p>
+                            </video>
+                        </div>
+                        <div class="reviews__slide-bottom">
+                            <div class="reviews__slide-name">Фамилия Имя Отчество</div>
+                            <div class="reviews__slide-work">Должность</div>
+                            <div class="reviews__slide-company">Компания</div>
+                        </div>
+                    </div><!-- /slide -->
+                    <div class="swiper-slide reviews__slide">
+                        <div class="reviews__slide-top">
+                            <video class="video-js" controls preload="auto" poster="img/product/poster-about.png"
+                                   data-setup='{}'>
+                                <source src="img/1.mp4" type="video/mp4">
+                                </source>
+                                <source src="img/1.mp4" type="video/webm">
+                                </source>
+                                <source src="img/1.mp4" type="video/ogg">
+                                </source>
+                                <p class="vjs-no-js">
+                                    To view this video please enable JavaScript, and consider upgrading to a
+                                    web browser that
+                                    <a href="https://videojs.com/html5-video-support/" target="_blank">
+                                        supports HTML5 video
+                                    </a>
+                                </p>
+                            </video>
+                        </div>
+                        <div class="reviews__slide-bottom">
+                            <div class="reviews__slide-name">Фамилия Имя Отчество</div>
+                            <div class="reviews__slide-work">Должность</div>
+                            <div class="reviews__slide-company">Компания</div>
+                        </div>
+                    </div><!-- /slide -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col nav-wrapper">
+                    <button class="navigation__arrow navigation__arrow-prev d-block d-lg-none"><img
+                            src="img/product/arrow-prev-slider.svg"
+                            alt="icon"></button>
+                    <div class="pagination">
+
+                    </div>
+                    <button class="navigation__arrow navigation__arrow-next d-block d-lg-none"><img
+                            src="img/product/arrow-next-slider.svg"
+                            alt="icon"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock events %}

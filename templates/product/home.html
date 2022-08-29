@@ -9,6 +9,7 @@
                 <div class="swiper-wrapper">
                     {% for product in products %}
                         {% for items in product.product.all %}
+                            {% if items.draft %}
                             <div class="swiper-slide intro-main__slide"
                                  style="background-image: url('{{ items.image.url }}');">
                                 <div class="container intro-main__container">
@@ -21,6 +22,8 @@
                                 <div class="bg-linear"></div>
                                 <div class="bg-linear1"></div>
                             </div><!-- /slide -->
+
+                            {% endif %}
                         {% endfor %}
                     {% endfor %}
                     {#                    <div class="swiper-slide intro-main__slide"#}

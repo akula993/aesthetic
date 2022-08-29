@@ -1,0 +1,213 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <main class="main first">
+        <!-- intro-events -->
+        <section class="intro-events" id="intro-events"
+                 style="background-image: url('{% static "img/archives/bg-archives.png" %}');">
+            <div class="container intro-events__container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <a href="{% url 'home' %}" class="intro-events__catalog-btn btn-back">На главную</a>
+                        {% block title_event %}
+                            <h1 class="intro-events__title">
+                                Мероприятия</h1>
+                            <div class="intro-events__subtitle">Краткое описание раздела</div>
+                        {% endblock title_event %}
+                        <div class="__select d-block d-lg-none" data-state="">
+                            <div class="__select__title" data-default="Option 0">Мероприятия</div>
+                            <div class="__select__content">
+                                <input id="singleSelect0" class="__select__input" type="radio" name="singleSelect"
+                                       checked>
+                                <label for="singleSelect0" class="__select__label">Все публикации</label>
+                                <input id="singleSelect1" class="__select__input" type="radio" name="singleSelect">
+                                <label for="singleSelect1" class="__select__label">Мероприятия</label>
+                                <input id="singleSelect2" class="__select__input" type="radio" name="singleSelect"
+                                       checked>
+                                <label for="singleSelect2" class="__select__label">Календарь мероприятий</label>
+                                <input id="singleSelect3" class="__select__input" type="radio" name="singleSelect">
+                                <label for="singleSelect3" class="__select__label">Материалы</label>
+                                <input id="singleSelect4" class="__select__input" type="radio" name="singleSelect">
+                                <label for="singleSelect4" class="__select__label">Проверка сертификата</label>
+                            </div>
+                        </div>
+
+                        {% block intro_events %}
+                        {% endblock intro_events %}
+
+                    </div>
+                </div>
+            </div>
+            <div class="bg-linear"></div>
+            <div class="bg-linear1"></div>
+        </section>
+        {% block events %}
+        {% endblock events %}
+        <section class="reviews" id="reviews">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="reviews__title-wrapper">
+                            <h3 class="reviews__title">
+                                Отзывы
+                            </h3>
+                            <div class="reviews__navigation navigation d-none d-lg-block">
+                                <button class="navigation__arrow navigation__arrow-prev"><img
+                                        src="img/product/arrow-prev-slider.svg"
+                                        alt="icon"></button>
+                                <button class="navigation__arrow navigation__arrow-next"><img
+                                        src="img/product/arrow-next-slider.svg"
+                                        alt="icon"></button>
+                            </div>
+                            <a href="#" class="btn-more d-block d-lg-none">Все отзывы</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper reviews__slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide reviews__slide">
+                            <div class="reviews__slide-top">
+                                <video class="video-js" controls preload="auto" poster="img/product/poster-about.png"
+                                       data-setup='{}'>
+                                    <source src="img/1.mp4" type="video/mp4">
+                                    </source>
+                                    <source src="img/1.mp4" type="video/webm">
+                                    </source>
+                                    <source src="img/1.mp4" type="video/ogg">
+                                    </source>
+                                    <p class="vjs-no-js">
+                                        To view this video please enable JavaScript, and consider upgrading to a
+                                        web browser that
+                                        <a href="https://videojs.com/html5-video-support/" target="_blank">
+                                            supports HTML5 video
+                                        </a>
+                                    </p>
+                                </video>
+                            </div>
+                            <div class="reviews__slide-bottom">
+                                <div class="reviews__slide-name">Фамилия Имя Отчество</div>
+                                <div class="reviews__slide-work">Должность</div>
+                                <div class="reviews__slide-company">Компания</div>
+                            </div>
+                        </div><!-- /slide -->
+                        <div class="swiper-slide reviews__slide">
+                            <div class="reviews__slide-top">
+                                <video class="video-js" controls preload="auto" poster="img/product/poster-about.png"
+                                       data-setup='{}'>
+                                    <source src="img/1.mp4" type="video/mp4">
+                                    </source>
+                                    <source src="img/1.mp4" type="video/webm">
+                                    </source>
+                                    <source src="img/1.mp4" type="video/ogg">
+                                    </source>
+                                    <p class="vjs-no-js">
+                                        To view this video please enable JavaScript, and consider upgrading to a
+                                        web browser that
+                                        <a href="https://videojs.com/html5-video-support/" target="_blank">
+                                            supports HTML5 video
+                                        </a>
+                                    </p>
+                                </video>
+                            </div>
+                            <div class="reviews__slide-bottom">
+                                <div class="reviews__slide-name">Фамилия Имя Отчество</div>
+                                <div class="reviews__slide-work">Должность</div>
+                                <div class="reviews__slide-company">Компания</div>
+                            </div>
+                        </div><!-- /slide -->
+                        <div class="swiper-slide reviews__slide">
+                            <div class="reviews__slide-top">
+                                <video class="video-js" controls preload="auto" poster="img/product/poster-about.png"
+                                       data-setup='{}'>
+                                    <source src="img/1.mp4" type="video/mp4">
+                                    </source>
+                                    <source src="img/1.mp4" type="video/webm">
+                                    </source>
+                                    <source src="img/1.mp4" type="video/ogg">
+                                    </source>
+                                    <p class="vjs-no-js">
+                                        To view this video please enable JavaScript, and consider upgrading to a
+                                        web browser that
+                                        <a href="https://videojs.com/html5-video-support/" target="_blank">
+                                            supports HTML5 video
+                                        </a>
+                                    </p>
+                                </video>
+                            </div>
+                            <div class="reviews__slide-bottom">
+                                <div class="reviews__slide-name">Фамилия Имя Отчество</div>
+                                <div class="reviews__slide-work">Должность</div>
+                                <div class="reviews__slide-company">Компания</div>
+                            </div>
+                        </div><!-- /slide -->
+                        <div class="swiper-slide reviews__slide">
+                            <div class="reviews__slide-top">
+                                <video class="video-js" controls preload="auto" poster="img/product/poster-about.png"
+                                       data-setup='{}'>
+                                    <source src="img/1.mp4" type="video/mp4">
+                                    </source>
+                                    <source src="img/1.mp4" type="video/webm">
+                                    </source>
+                                    <source src="img/1.mp4" type="video/ogg">
+                                    </source>
+                                    <p class="vjs-no-js">
+                                        To view this video please enable JavaScript, and consider upgrading to a
+                                        web browser that
+                                        <a href="https://videojs.com/html5-video-support/" target="_blank">
+                                            supports HTML5 video
+                                        </a>
+                                    </p>
+                                </video>
+                            </div>
+                            <div class="reviews__slide-bottom">
+                                <div class="reviews__slide-name">Фамилия Имя Отчество</div>
+                                <div class="reviews__slide-work">Должность</div>
+                                <div class="reviews__slide-company">Компания</div>
+                            </div>
+                        </div><!-- /slide -->
+                        <div class="swiper-slide reviews__slide">
+                            <div class="reviews__slide-top">
+                                <video class="video-js" controls preload="auto" poster="img/product/poster-about.png"
+                                       data-setup='{}'>
+                                    <source src="img/1.mp4" type="video/mp4">
+                                    </source>
+                                    <source src="img/1.mp4" type="video/webm">
+                                    </source>
+                                    <source src="img/1.mp4" type="video/ogg">
+                                    </source>
+                                    <p class="vjs-no-js">
+                                        To view this video please enable JavaScript, and consider upgrading to a
+                                        web browser that
+                                        <a href="https://videojs.com/html5-video-support/" target="_blank">
+                                            supports HTML5 video
+                                        </a>
+                                    </p>
+                                </video>
+                            </div>
+                            <div class="reviews__slide-bottom">
+                                <div class="reviews__slide-name">Фамилия Имя Отчество</div>
+                                <div class="reviews__slide-work">Должность</div>
+                                <div class="reviews__slide-company">Компания</div>
+                            </div>
+                        </div><!-- /slide -->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col nav-wrapper">
+                        <button class="navigation__arrow navigation__arrow-prev d-block d-lg-none"><img
+                                src="img/product/arrow-prev-slider.svg"
+                                alt="icon"></button>
+                        <div class="pagination">
+
+                        </div>
+                        <button class="navigation__arrow navigation__arrow-next d-block d-lg-none"><img
+                                src="img/product/arrow-next-slider.svg"
+                                alt="icon"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+{% endblock content %}

@@ -1,0 +1,177 @@
+{% extends 'product/event_base.html' %}
+{% load static %}
+{% block intro_events %}
+    <button class="btn-reset intro-product__btn intro-calendar__btn" data-graph-path="modal-start">
+        <div class="intro-product__btn-text intro-calendar__btn-text">
+            Записаться на обучение
+        </div>
+        <img src="{% static 'img/icons/arrows.svg' %}" alt="arrows">
+    </button>
+
+{% endblock intro_events %}
+{% block events %}
+
+    <!-- calendar -->
+    <section class="calendar" id="calendar">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="calendar__wrapper">
+
+
+                        <div class="calendar__title">
+                            Ближайшие мероприятия
+
+                        </div>
+                        <ul class="calendar__list">
+                            {% for event in events %}
+                                <li class="calendar__item">
+                                    <div class="calendar__item-title-wrapper">
+                                        <div class="calendar__item-title">
+                                            <a href="{{ event.get_absolute_url }}">{{ event.title }}</a>
+                                        </div>
+                                        <div class="calendar__item-date">
+                                            <div class="calendar__item-day">
+                                                {{ event.article_date|date:"d M Y" }}
+                                            </div>
+                                            <div class="calendar__item-time">
+                                                {{ event.article_date|time }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="calendar__item-text">
+                                        В рамках спецификации современных стандартов, интерактивные прототипы призывают
+                                        нас к новым свершениям, которые, в свою очередь, должны быть описаны максимально
+                                        подробно.
+                                    </p>
+                                    <div class="calendar-programm">
+                                        <div class="calendar-programm__title">
+                                            Программа
+                                        </div>
+                                        <ul class="calendar-programm__list">
+                                            <li class="calendar-programm__item">
+                                                В рамках спецификации современных стандартов, интерактивные прототипы
+                                                призывают нас к новым свершениям, которые, в свою очередь, должны быть
+                                                описаны максимально подробно.
+                                            </li>
+                                            <li class="calendar-programm__item">
+                                                В рамках спецификации современных стандартов, интерактивные прототипы
+                                                призывают нас к новым свершениям, которые, в свою очередь, должны быть
+                                                описаны максимально подробно.
+                                            </li>
+                                            <li class="calendar-programm__item">
+                                                В рамках спецификации современных стандартов, интерактивные прототипы
+                                                призывают нас к новым свершениям, которые, в свою очередь, должны быть
+                                                описаны максимально подробно.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <button class="btn-reset calendar-programm__btn btn" data-graph-path="modal-start">
+                                        принять участие
+                                    </button>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                        <div class="calendar-finished">
+                            <div class="calendar__title">Завершённые мероприятия</div>
+                            <ul class="calendar__list">
+                                <li class="calendar__item">
+                                    <div class="calendar__item-title-wrapper">
+                                        <div class="calendar__item-title">
+                                            Название ближайшего занятия
+                                        </div>
+                                        <div class="calendar__item-date">
+                                            <div class="calendar__item-day">
+                                                10 мая 2022
+                                            </div>
+                                            <div class="calendar__item-time">
+                                                12:00-15:00
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="calendar__item-text">
+                                        В рамках спецификации современных стандартов, интерактивные прототипы
+                                        призывают нас к новым свершениям, которые, в свою очередь, должны быть
+                                        описаны максимально подробно.
+                                    </p>
+                                    <div class="calendar-programm">
+                                        <div class="calendar-programm__title">
+                                            Программа
+                                        </div>
+                                        <ul class="calendar-programm__list">
+                                            <li class="calendar-programm__item">
+                                                В рамках спецификации современных стандартов, интерактивные
+                                                прототипы призывают нас к новым свершениям, которые, в свою очередь,
+                                                должны быть описаны максимально подробно.
+                                            </li>
+                                            <li class="calendar-programm__item">
+                                                В рамках спецификации современных стандартов, интерактивные
+                                                прототипы призывают нас к новым свершениям, которые, в свою очередь,
+                                                должны быть описаны максимально подробно.
+                                            </li>
+                                            <li class="calendar-programm__item">
+                                                В рамках спецификации современных стандартов, интерактивные
+                                                прототипы призывают нас к новым свершениям, которые, в свою очередь,
+                                                должны быть описаны максимально подробно.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <button class="btn-reset calendar-programm__btn btn">принять участие</button>
+                                </li>
+                                <li class="calendar__item">
+                                    <div class="calendar__item-title-wrapper">
+                                        <div class="calendar__item-title">
+                                            Название ближайшего занятия
+                                        </div>
+                                        <div class="calendar__item-date">
+                                            <div class="calendar__item-day">
+                                                10 мая 2022
+                                            </div>
+                                            <div class="calendar__item-time">
+                                                12:00-15:00
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="calendar__item-text">
+                                        В рамках спецификации современных стандартов, интерактивные прототипы
+                                        призывают нас к новым свершениям, которые, в свою очередь, должны быть
+                                        описаны максимально подробно.
+                                    </p>
+                                    <div class="calendar-programm">
+                                        <div class="calendar-programm__title">
+                                            Программа
+                                        </div>
+                                        <ul class="calendar-programm__list">
+                                            <li class="calendar-programm__item">
+                                                В рамках спецификации современных стандартов, интерактивные
+                                                прототипы призывают нас к новым свершениям, которые, в свою очередь,
+                                                должны быть описаны максимально подробно.
+                                            </li>
+                                            <li class="calendar-programm__item">
+                                                В рамках спецификации современных стандартов, интерактивные
+                                                прототипы призывают нас к новым свершениям, которые, в свою очередь,
+                                                должны быть описаны максимально подробно.
+                                            </li>
+                                            <li class="calendar-programm__item">
+                                                В рамках спецификации современных стандартов, интерактивные
+                                                прототипы призывают нас к новым свершениям, которые, в свою очередь,
+                                                должны быть описаны максимально подробно.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <button class="btn-reset calendar-programm__btn btn">принять участие</button>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    {% include 'product/events/inc/menu.html' %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+{% endblock events %}

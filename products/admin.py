@@ -1,14 +1,38 @@
 from ckeditor_uploader.widgets import CKEditorUploadingWidget
 from django import forms
 from django.contrib import admin
+from django.contrib.flatpages.admin import FlatPageAdmin
+from django.contrib.flatpages.models import FlatPage
+from django.utils.translation import gettext_lazy as _
 from django.utils.safestring import mark_safe
 
 from products.models import Product, Intro, Events
 
 
-class EventsAdminForm(forms.ModelForm):
-    description = forms.CharField(widget=CKEditorUploadingWidget(), label='Полное описание')
+# Define a new FlatPageAdmin
+class FlatPageAdmin(FlatPageAdmin):
+    fieldsets = (
+        (None, {'fields': ('url', 'title', 'content', 'sites')}),
+        (_('Advanced options'), {
+            'classes': ('collapse',),
+            'fields': (
+                'enable_comments',
+                'registration_required',
+                'template_name',
+            ),
+        }),
+    )
 
+# Re-register FlatPageAdmin
+admin.site.unregister(FlatPage)
+admin.site.register(FlatPage, FlatPageAdmin)
+
+
+
+class EventsAdminForm(forms.ModelForm):
+    description = forms.CharField(widget=CKEditorUploadingWidget(), label='Основные направления')
+    training_formats= forms.CharField(widget=CKEditorUploadingWidget(), label='Форма обучения')
+    learning_conditions= forms.CharField(widget=CKEditorUploadingWidget(), label='Условия обучения')
     class Meta:
         model = Events
         fields = '__all__'

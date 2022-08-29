@@ -26,12 +26,11 @@
                         <div class="article__title" id="article__title-1">Основные направления</div>
                         <p>
                             {{ event.description|safe }}
+
                         </p>
                         <div class="article__title" id="article__title-2">Форматы обучения</div>
                         <p>
-                            Сложно сказать, почему непосредственные участники технического прогресса призывают нас к
-                            новым свершениям,
-                            которые, в свою очередь, должны быть разоблачены.
+                            {{ event.training_formats|safe }}
                         </p>
                         <div class="format">
                             <ul class="format__list">

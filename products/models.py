@@ -58,16 +58,15 @@ class Intro(models.Model):
     #     return reverse('intro_detail', kwargs={'slug': self.name})
 
 
-
-
 class Events(models.Model):
     title = models.CharField('Название занятия', max_length=150)
     url = models.SlugField('URL', max_length=150)
     text = models.CharField(max_length=350, blank=True, null=True, verbose_name='Краткое описание')
     data_up = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
     article_date = models.DateTimeField(verbose_name='Дата мероприятия')
-    description = models.TextField(blank=True, null=True, verbose_name='Полное описание')
-
+    training_formats = models.TextField(verbose_name='Форма обучения', blank=True, null=True,)
+    description = models.TextField(blank=True, null=True, verbose_name='Основные направления')
+    learning_conditions = models.TextField(blank=True, null=True, verbose_name='Условия обучения')
     views = models.IntegerField(verbose_name='Просмотры', null=True, blank=True, default=0)
 
     def __str__(self):
@@ -81,7 +80,7 @@ class Events(models.Model):
         return reverse('event_detail', kwargs={'slug': self.url})
 
 
-
+# Reviews
 
 
 
@@ -121,4 +120,3 @@ class Contacts(models.Model):
 
 
 
-# Reviews

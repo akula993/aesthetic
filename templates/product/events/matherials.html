@@ -1,0 +1,37 @@
+{% extends 'product/event_base.html' %}
+{% load static %}
+
+{% block intro_events %}
+                    <h1 class="intro-matherials__title">{{ flatpage.title }}</h1>
+                    <div class="intro-matherials__subtitle">Краткое описание раздела</div>
+{% endblock intro_events %}
+{% block events %}
+<main class="main first">
+
+    <section class="matherials" id="matherials">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="matherials__title">
+                        О материалах
+                    </div>
+                    <div class="matherials__content">
+                        <p>
+                            {{ flatpage.content }}
+                        </p>
+                        <div class="matherials__preview">
+                            <a href="#" class="matherials__btn btn">Перейти к просмотру материалов</a>
+                            <a href="#" class="matherials__btn-client">Я клиент - как получить доступ?</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    {% include 'product/events/inc/menu.html' %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</main>
+{% endblock events %}

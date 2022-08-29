@@ -74,6 +74,7 @@ class EventsViews(ListView):
     template_name = 'product/events/events.html'
     context_object_name = 'events'
     slug_field = 'url'
+    extra_context = {'title': 'Мероприятия'}
 
     # def get_queryset(self):
     #     now = timezone.now()

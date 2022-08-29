@@ -1,13 +1,17 @@
+{% load flatpages %}
+{% get_flatpages as flatpages %}
 <nav class="events__nav d-none d-lg-block">
     <ul class="events__nav-list">
         <li>
-            <a href="#">Мероприятия</a>
-        </li>
-        <li class="active">
-            <a href="{% url 'events' %}">Календарь мероприятий</a>
+            {% now 'd m Y' as date_a %}
+            <a href="{% url 'events' %}">Мероприятия</a>
         </li>
         <li>
-            <a href="#">Материалы</a>
+            <a href="{% url 'events' %}">Календарь мероприятий</a>
+        </li>
+
+        <li>
+            <a href="{%url 'matherials' %}">Материалы</a>
         </li>
         <li>
             <a href="#">Проверка сертификата</a>
